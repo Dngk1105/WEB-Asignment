@@ -1,4 +1,6 @@
 /* Website template by freewebsitetemplates.com */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=UnifrakturCook:wght@700&display=swap');
+
 @font-face {
 	font-family: 'PTSerif-Caption';
 	src: url('../fonts/PT_Serif-Caption-Web-Regular.eot');
@@ -17,7 +19,8 @@
 
 body {
 	background: #fed58e url(../images/bg-body.png) repeat-x left top;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	color: #525252;
 	margin: 0;
 }
 
@@ -106,7 +109,7 @@ img {
 
 a.sitename {
 	float: left;
-	font-family: "UnifrakturCook-Bold";
+	font-family: 'UnifrakturCook', 'UnifrakturCook-Bold', cursive, Georgia, serif;
 	font-size: 24px;
 	height: 24px;
 	margin-left: 5px;
@@ -145,9 +148,9 @@ a.sitename {
 
 #searchbar input.txtfield {
 	background-position: 0 0;
-	color: #c3baaf;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 12px;
+	color: #7b6f63;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	font-size: 12.5px;
 	font-style: italic;
 	height: 24px;
 	line-height: 24px;
@@ -172,6 +175,7 @@ a.sitename {
 
 #contents h1 {
 	color: #7e501c;
+	font-family: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
 	font-size: 31px;
 	font-weight: normal;
 	margin: 0 0 30px;
@@ -189,7 +193,9 @@ a.sitename {
 }
 
 #contents h2 {
-	font-size: 20px;
+	color: #4a2408;
+	font-family: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
+	font-size: 21px;
 	line-height: 42px;
 	margin: 0 0 24px;
 	text-align: center;
@@ -197,6 +203,7 @@ a.sitename {
 
 #contents h3 {
 	color: #300302;
+	font-family: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
 	font-size: 18px;
 	line-height: 24px;
 	margin: 0 0 0;
@@ -205,17 +212,19 @@ a.sitename {
 
 #contents h4 {
 	color: #300302;
-	font-size: 14px;
+	font-family: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
 	line-height: 24px;
 	margin: 0;
 }
 
 #contents p {
 	color: #525252;
-	font-size: 14px;
-	line-height: 24px;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	font-size: 14.5px;
+	line-height: 25px;
 	margin: 0;
-	padding: 0 0 30px;
+	padding: 0 0 26px;
 	text-align: justify;
 }
 
@@ -378,11 +387,15 @@ a.sitename {
 #navigation li a {
 	color: #fffefd;
 	display: block;
-	font: 30px/72px "PTSerif-Caption";
+	font-family: 'Playfair Display', 'PTSerif-Caption', Georgia, serif;
+	font-size: 26px;
+	line-height: 72px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	text-shadow: 0 5px 2px #27100c;
+	text-shadow: 0 4px 2px #27100c;
 }
 
 #navigation li a:hover,
@@ -552,7 +565,9 @@ a.sitename {
 
 #featured li p {
 	color: #593e0f;
-	font: 14px/24px "Times New Roman", Times, serif;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	font-size: 13.5px;
+	line-height: 23px;
 	text-align: justify;
 }
 
@@ -566,8 +581,8 @@ a.sitename {
 
 #footnote {
 	color: #c89f59;
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 10px;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	font-size: 11px;
 	width: 950px;
 	border-top: 6px solid #d6ae6a;
 	margin: 0 auto;
@@ -585,261 +600,321 @@ article,
 figure,
 figcaption,
 footer,
-time {
+time,
+search,
+hgroup {
 	display: block;
 }
 
-/*------------------------------ REGISTER FORM STYLES ------------------------------*/
-.form-card {
-	background: #ffffff;
-	border: 1px solid #e2d3be;
-	padding: 24px 30px;
-	margin-bottom: 30px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+/* Page Section Banners */
+.page-header {
+	margin-bottom: 24px;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #ecd9bc;
 }
 
+.page-header h1,
 .page-title {
-	color: #6d4217;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 26px;
-	font-weight: normal;
-	margin: 0 0 10px;
-	text-shadow: 0 1px #fbf3db;
+	color: #7e501c;
+	font-family: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
+	font-size: 31px;
+	font-weight: 700;
+	margin: 0 0 8px;
+	text-shadow: 0 3px #fdf2be;
 }
 
-.page-subtitle {
-	color: #4b4b4b;
-	font-size: 13px;
-	line-height: 20px;
-	margin: 0 0 18px;
-	font-family: Georgia, "Times New Roman", Times, serif;
+.page-subtitle,
+.lead-subtitle {
+	color: #6a4a23;
+	font-size: 14px;
+	line-height: 22px;
+	margin: 0 0 16px;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+/*------------------------------ REGISTER FORM STYLES (BLENDED) ------------------------------*/
+.register-section,
+.form-card {
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin-bottom: 24px;
+	box-shadow: none;
 }
 
 .register-form fieldset {
-	border: 1px solid #8c8c8c;
-	margin: 0 0 18px;
-	padding: 12px 18px 18px;
-	background: #ffffff;
+	border: 1px solid #d8c7b0;
+	margin: 0 0 22px;
+	padding: 16px 22px 20px;
+	background: rgba(255, 252, 247, 0.7);
+	border-radius: 3px;
+	box-shadow: inset 0 1px 3px rgba(110, 70, 20, 0.04);
 }
 
 .register-form legend {
-	color: #222222;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 14px;
-	font-weight: normal;
-	padding: 0 6px;
+	color: #4a2408;
+	font-family: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+	font-weight: 700;
+	padding: 0 8px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
 .register-form .form-group {
-	margin: 0 0 10px;
+	margin: 0 0 14px;
 }
 
 .register-form .form-group label {
 	display: block;
-	color: #222222;
-	font-size: 13px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	margin: 0 0 4px;
+	color: #3b220d;
+	font-size: 13.5px;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	font-weight: 600;
+	margin: 0 0 5px;
 }
 
 .register-form .form-control {
-	border: 1px solid #7c7c7c;
-	background-color: #ffffff;
-	color: #222222;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	height: 24px;
-	line-height: 24px;
-	padding: 0 6px;
+	border: 1px solid #c4b39b;
+	background-color: #fffefb;
+	color: #331f0e;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	font-size: 13.5px;
+	height: 30px;
+	line-height: 28px;
+	padding: 0 8px;
 	width: 290px;
 	box-sizing: border-box;
-	transition: border-color 0.2s, box-shadow 0.2s;
+	border-radius: 2px;
+	transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
 .register-form .form-control:focus {
-	border-color: #2f7a26;
+	border-color: #7e501c;
+	background-color: #ffffff;
 	outline: none;
-	box-shadow: 0 0 4px rgba(47, 122, 38, 0.3);
+	box-shadow: 0 0 0 2px rgba(126, 80, 28, 0.2);
 }
 
 .register-form .form-control.control-sm {
-	width: 80px;
+	width: 90px;
 }
 
 .register-form .form-control.is-invalid {
-	border-color: #c0392b !important;
-	background-color: #fff9f8;
+	border-color: #b22222 !important;
+	background-color: #fff5f5;
 }
 
 .register-form select.form-control {
-	height: 26px;
-	padding: 2px 4px;
-	width: 170px;
+	height: 30px;
+	padding: 2px 6px;
+	width: 180px;
 }
 
 .register-form textarea.form-control {
-	height: 80px;
-	line-height: 18px;
-	padding: 6px;
-	width: 95%;
-	max-width: 520px;
+	height: 90px;
+	line-height: 20px;
+	padding: 8px;
+	width: 100%;
+	max-width: 540px;
 	resize: vertical;
 }
 
 .register-form .radio-group,
 .register-form .checkbox-group {
 	margin: 6px 0;
-	font-size: 13px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13.5px;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
 }
 
 .register-form .inline-option {
 	display: inline-block;
-	margin-right: 18px;
-	color: #222222;
+	margin-right: 20px;
+	color: #3b220d;
 	font-weight: normal;
 	cursor: pointer;
 }
 
 .register-form .inline-option input[type="radio"],
 .register-form .inline-option input[type="checkbox"] {
-	margin: 0 4px 0 0;
+	margin: 0 5px 0 0;
 	vertical-align: middle;
+	accent-color: #7e501c;
 }
 
 .register-form .terms-group {
-	margin: 14px 0 6px;
-	font-size: 13px;
-	font-family: Arial, Helvetica, sans-serif;
+	margin: 16px 0 10px;
+	font-size: 13.5px;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
 }
 
 .register-form .terms-group label {
 	display: inline-block;
-	color: #222222;
+	color: #3b220d;
 	cursor: pointer;
 }
 
 .register-form .terms-group input[type="checkbox"] {
 	margin-right: 6px;
 	vertical-align: middle;
+	accent-color: #7e501c;
 }
 
 .register-form .form-actions {
-	margin: 16px 0 6px;
+	margin: 20px 0 10px;
 }
 
+.btn-form-newspaper,
 .btn-form-green {
-	background: #1e7518 linear-gradient(to bottom, #2b8c24 0%, #176512 100%);
-	border: 1px solid #114d0c;
-	border-radius: 2px;
-	color: #ffffff;
+	background: #7e501c linear-gradient(to bottom, #946026 0%, #683e10 100%);
+	border: 1px solid #4a2907;
+	border-radius: 3px;
+	color: #fdfaf4;
 	cursor: pointer;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 12px;
-	font-weight: bold;
-	height: 25px;
-	line-height: 21px;
-	padding: 1px 14px;
-	margin-right: 8px;
-	text-shadow: 0 1px 1px #0d3809;
+	font-family: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	height: 32px;
+	line-height: 30px;
+	padding: 0 20px;
+	margin-right: 10px;
+	text-shadow: 0 1px 1px #2a1501;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	transition: background 0.2s, box-shadow 0.2s;
 }
 
+.btn-form-newspaper:hover,
 .btn-form-green:hover {
-	background: #258f1e linear-gradient(to bottom, #34a52c 0%, #1c7816 100%);
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	background: #8e5c23 linear-gradient(to bottom, #a56e2f 0%, #754815 100%);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.btn-form-newspaper.btn-secondary {
+	background: #998a77 linear-gradient(to bottom, #ada08e 0%, #837562 100%);
+	border-color: #635746;
+	text-shadow: 0 1px 1px #3c3328;
+}
+
+.btn-form-newspaper.btn-secondary:hover {
+	background: #a99a88 linear-gradient(to bottom, #bcaf9d 0%, #90816e 100%);
 }
 
 .error-text {
-	color: #c0392b;
+	color: #a82015;
 	display: block;
 	font-size: 12px;
 	font-style: italic;
-	margin-top: 3px;
-	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 4px;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
 }
 
 .form-alert {
 	display: none;
-	padding: 12px 16px;
-	margin-bottom: 18px;
+	padding: 12px 18px;
+	margin-bottom: 20px;
 	border-radius: 3px;
-	font-size: 13px;
-	line-height: 20px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13.5px;
+	line-height: 22px;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
 }
 
 .form-alert.success {
-	background-color: #eafaf1;
-	border: 1px solid #2ecc71;
-	color: #145a32;
+	background-color: #f2f8ee;
+	border: 1px solid #7ea869;
+	color: #245413;
 }
 
-/*------------------------------ MEDIA PAGE STYLES ------------------------------*/
+/*------------------------------ MEDIA ARTICLE STYLES (BLENDED) ------------------------------*/
 .media-article {
-	background: #ffffff;
-	border: 1px solid #e2d3be;
-	padding: 24px 30px;
-	margin-bottom: 30px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin-bottom: 24px;
+	box-shadow: none;
+}
+
+.media-header {
+	margin-bottom: 20px;
+	border-bottom: 2px solid #ecd9bc;
+	padding-bottom: 12px;
 }
 
 .media-title {
-	color: #6d4217;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 26px;
-	font-weight: normal;
+	color: #7e501c;
+	font-family: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	font-weight: 700;
 	margin: 0 0 8px;
-	text-shadow: 0 1px #fbf3db;
+	text-shadow: 0 2px #fdf2be;
+	line-height: 38px;
 }
 
 .media-meta {
-	color: #666666;
-	font-size: 12px;
-	margin: 0 0 20px;
-	font-family: Arial, Helvetica, sans-serif;
+	color: #7a634a;
+	font-size: 13px;
+	margin: 0;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
 }
 
 .media-meta a {
-	color: #5d3e18;
+	color: #7e501c;
 	text-decoration: underline;
+	font-weight: 600;
+}
+
+.media-meta a:hover {
+	color: #e19320;
 }
 
 .media-figure {
 	margin: 0 0 24px;
 	text-align: center;
+	padding: 6px;
+	background: #f4ecdc;
+	border: 1px solid #dcd1c2;
+	box-shadow: 0 1px 4px rgba(70, 45, 15, 0.08);
+	border-radius: 2px;
 }
 
 .media-figure img {
 	max-width: 100%;
 	height: auto;
-	border: 1px solid #dcd1c2;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #cbb9a3;
 }
 
-.media-figure figcaption {
-	color: #333333;
-	font-family: Arial, Helvetica, sans-serif;
+.media-figure figcaption,
+.media-player-wrapper figcaption,
+.map-wrapper figcaption {
+	color: #593e0f;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
 	font-size: 13px;
-	font-weight: 500;
+	font-style: italic;
 	margin-top: 8px;
 	text-align: center;
+	line-height: 20px;
 }
 
 .media-heading {
-	color: #222222;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 18px;
-	font-weight: bold;
-	margin: 24px 0 12px;
-	text-align: center;
+	color: #300302;
+	font-family: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 28px 0 12px;
+	text-align: left;
+	border-bottom: 1px dashed #d8c4a9;
+	padding-bottom: 6px;
 }
 
 .media-desc {
-	color: #3b3b3b;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 14px;
-	line-height: 24px;
+	color: #525252;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+	font-size: 14.5px;
+	line-height: 25px;
 	margin: 0 0 18px;
 	text-align: justify;
 }
@@ -851,49 +926,65 @@ time {
 .media-player-wrapper {
 	text-align: center;
 	margin: 0 0 24px;
+	padding: 8px;
+	background: #f5eedf;
+	border: 1px solid #dcd1c2;
+	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(70, 45, 15, 0.08);
 }
 
 .media-player-wrapper video {
 	max-width: 100%;
-	width: 520px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	background: #000;
+	width: 560px;
+	border: 1px solid #4a341e;
+	border-radius: 2px;
+	background: #1a1208;
+	display: block;
+	margin: 0 auto;
 }
 
 .media-player-wrapper audio {
 	width: 100%;
-	max-width: 480px;
-	margin-top: 6px;
+	max-width: 520px;
+	margin: 6px auto;
+	display: block;
 }
 
 .map-wrapper {
 	text-align: center;
 	margin: 0 0 24px;
+	padding: 8px;
+	background: #f5eedf;
+	border: 1px solid #dcd1c2;
+	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(70, 45, 15, 0.08);
 }
 
 .map-wrapper iframe {
-	border: 1px solid #ccc;
+	border: 1px solid #bba78c;
 	border-radius: 2px;
 	width: 100%;
-	max-width: 520px;
-	height: 260px;
+	max-width: 560px;
+	height: 280px;
+	display: block;
+	margin: 0 auto;
 }
 
 .media-tags {
-	border-top: 1px dashed #d6ae6a;
+	border-top: 1px dashed #c9ad7d;
 	padding-top: 14px;
-	margin-top: 24px;
-	font-size: 13px;
-	color: #555555;
-	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 28px;
+	font-size: 13.5px;
+	color: #634720;
+	font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
 }
 
 .media-tags a {
-	color: #197f14;
+	color: #199209;
 	text-decoration: underline;
+	font-weight: 600;
 }
 
 .media-tags a:hover {
-	color: #bd831e;
+	color: #be841f;
 }

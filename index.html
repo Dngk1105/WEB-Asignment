@@ -12,6 +12,9 @@
 	<meta property="og:url" content="http://dngk2408.id.vn/index.html">
 	<meta property="og:type" content="website">
 	<link rel="canonical" href="http://dngk2408.id.vn/index.html">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 	<title>Trang chủ - Blakletterpress</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
@@ -28,12 +31,12 @@
 			<div id="logo">
 				<a href="index.html"><img src="images/logo.png" alt="Logo BLP Blakletterpress"></a>
 			</div>
-			<div id="searchbar">
-				<form action="#" method="get" role="search">
+			<search id="searchbar">
+				<form action="news.html" method="get" role="search">
 					<input type="text" name="q" value="Enter search query" class="txtfield" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';}" aria-label="Tìm kiếm tin tức">
 					<input type="submit" value="Search" class="btn">
 				</form>
-			</div>
+			</search>
 		</header>
 
 		<!-- THÂN TRANG GỒM NỘI DUNG CHÍNH & SIDEBAR -->
@@ -66,12 +69,14 @@
 					</ul>
 				</figure>
 				<article class="body">
-					<h1>Chào mừng đến với <a href="index.html">Blakletterpress</a> - Kênh thông tin <em>đáng tin cậy</em> của bạn.</h1>
+					<header class="page-header">
+						<h1>Chào mừng đến với <a href="index.html">Blakletterpress</a> - Kênh thông tin <em>đáng tin cậy</em> của bạn.</h1>
+					</header>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ligula vel velit varius fermentum. Nullam porta hendrerit metus id hendrerit. Maecenas consequat neque sed tellus commodo ultrices et et est. Maecenas non justo vitae dui vulputate rutrum sed a lacus. Pellentesque dapibus, felis eget ornare ultrices, est est imperdiet magna, id ultrices odio leo sed erat. Maecenas nec est egestas ipsum bibendum iaculis. Nulla accumsan posuere nisl. Cras eu consectetur turpis. Etiam condimentum, lorem ac imperdiet ultricies, velit arcu feugiat nunc, vel tristique sapien diam quis velit. Maecenas non metus augue, sit amet tristique libero. In placerat urna quis orci hendrerit pretium. Donec luctus, magna rhoncus pretium tempor, odio orci consequat turpis, id rutrum elit tellus eu odio. Nunc sapien libero, faucibus quis vehicula quis, interdum eu mauris.
+						Blakletterpress là kênh thông tin báo chí trực tuyến phát triển theo phong cách báo in cổ điển, kết hợp sức mạnh công nghệ số hiện đại. Chúng tôi cam kết mang tới độc giả những dòng tin thời sự nóng hổi, phân tích sâu sắc về kinh tế, đời sống xã hội, công nghệ xanh và phát triển bền vững với tinh thần khách quan, chuẩn xác và kịp thời.
 					</p>
 					<p>
-						Cras eu consectetur turpis. Etiam condimentum, lorem ac imperdiet ultricies, velit arcu feugiat nunc, vel tristique sapien diam quis velit. Maecenas non metus augue, sit amet tristique libero. In placerat urna quis orci hendrerit pretium. Donec luctus, magna rhoncus pretium tempor, odio orci consequat turpis, id rutrum elit tellus eu odio. Nunc sapien libero, faucibus quis vehicula quis, interdum eu mauris.
+						Với đội ngũ phóng viên, biên tập viên giàu nhiệt huyết và mạng lưới cộng tác viên trên toàn quốc, Blakletterpress không ngừng đổi mới nội dung truyền thông đa phương tiện — từ tin tức tức thời, phóng sự điều tra, đến video tài liệu và podcast đối thoại chuyên sâu. Hãy đồng hành cùng chúng tôi trên hành trình lan tỏa tri thức và những giá trị nhân văn tích cực.
 					</p>
 				</article>
 			</main>
@@ -106,21 +111,21 @@
 				</section>
 				<section class="section" aria-labelledby="posts-heading">
 					<div id="posts">
-						<h2 id="posts-heading">Placeholder</h2>
+						<h2 id="posts-heading">Tin Mới Nhất</h2>
 						<ul>
 							<li>
-								<h5>Title Sample One</h5>
+								<h5><a href="media.html" style="color:inherit; text-decoration:none;">Ngày hội Công nghệ Xanh 2026</a></h5>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ligula vel velit varius
+									Diễn đàn quy tụ doanh nghiệp công nghệ sạch và các giải pháp sinh thái bền vững.
 								</p>
-								<a href="news.html" class="more">Read more</a>
+								<a href="media.html" class="more">Xem chi tiết</a>
 							</li>
 							<li>
-								<h5>Title Sample One</h5>
+								<h5><a href="news.html" style="color:inherit; text-decoration:none;">Chuyển đổi số trong báo chí</a></h5>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ligula vel velit varius
+									Ứng dụng đa phương tiện giúp nâng cao trải nghiệm tiếp cận thông tin cho độc giả.
 								</p>
-								<a href="news.html" class="more">Read more</a>
+								<a href="news.html" class="more">Xem chi tiết</a>
 							</li>
 						</ul>
 						<a href="news.html" class="btn2">View More</a>
@@ -136,31 +141,31 @@
 					<li>
 						<a href="index.html" class="home" aria-label="Trang chủ"></a>
 						<p>
-							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							Trang chủ cung cấp cái nhìn tổng quan về các hoạt động xuất bản, tiêu điểm trong ngày và tiêu chí biên tập hàng đầu của tòa soạn.
 						</p>
 					</li>
 					<li>
 						<a href="news.html" class="bell" aria-label="Thông báo tin tức"></a>
 						<p>
-							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							Dòng tin thời sự, bản tin đặc biệt và các cập nhật mới nhất được phân loại khoa học theo từng chuyên đề được độc giả quan tâm.
 						</p>
 					</li>
 					<li>
 						<a href="media.html" class="globe" aria-label="Trang truyền thông sự kiện"></a>
 						<p>
-							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							Khám phá nội dung đa phương tiện sinh động với video sự kiện chất lượng cao, podcast thảo luận và tư liệu hình ảnh độc quyền.
 						</p>
 					</li>
 					<li>
 						<a href="register.html" class="pencil" aria-label="Đăng ký nhận thông tin"></a>
 						<p>
-							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							Đăng ký nhận bản tin định kỳ miễn phí vào hộp thư điện tử của bạn để không bỏ lỡ các phân tích chuyên sâu và sự kiện hấp dẫn.
 						</p>
 					</li>
 				</ul>
-				<p id="footnote">
-					&copy; Copyright &copy; 2011. Company name all rights reserved
-				</p>
+				<small id="footnote">
+					&copy; Copyright &copy; 2026 Blakletterpress. Mọi quyền được bảo lưu.
+				</small>
 			</div>
 		</footer>
 	</div>

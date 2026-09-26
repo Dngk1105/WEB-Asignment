@@ -12,6 +12,9 @@
 	<meta property="og:url" content="http://dngk2408.id.vn/news.html">
 	<meta property="og:type" content="website">
 	<link rel="canonical" href="http://dngk2408.id.vn/news.html">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 	<title>Tin tức - Blakletterpress</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
@@ -28,12 +31,12 @@
 			<div id="logo">
 				<a href="index.html"><img src="images/logo.png" alt="Logo BLP Blakletterpress"></a>
 			</div>
-			<div id="searchbar">
-				<form action="#" method="get" role="search">
+			<search id="searchbar">
+				<form action="news.html" method="get" role="search">
 					<input type="text" name="q" value="Enter search query" class="txtfield" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';}" aria-label="Tìm kiếm tin tức">
 					<input type="submit" value="Search" class="btn">
 				</form>
-			</div>
+			</search>
 		</header>
 
 		<!-- THÂN TRANG GỒM NỘI DUNG CHÍNH & SIDEBAR -->
@@ -41,63 +44,86 @@
 			<!-- NỘI DUNG CHÍNH (MAIN) -->
 			<main id="main">
 				<div class="body">
-					<h1 style="display:none;">Bản tin mới nhất Blakletterpress</h1>
+					<header class="page-header">
+						<h1>Bản Tin Mới Nhất</h1>
+						<p class="lead-subtitle">Dòng tin thời sự, sự kiện và phân tích chuyên sâu được cập nhật liên tục</p>
+					</header>
 					<section id="news-section" aria-label="Danh sách tin tức mới">
 						<ul id="list">
 							<li>
-								<article>
-									<time datetime="2012-01-01" class="time">01-01-2012</time>
-									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE ONE</a></h3>
+								<article class="news-item">
+									<header>
+										<time datetime="2026-04-22" class="time">22-04-2026</time>
+										<h3><a href="media.html" style="color:inherit; text-decoration:none;">TIÊU ĐIỂM: NGÀY HỘI CÔNG NGHỆ XANH 2026</a></h3>
+									</header>
 									<p>
-										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+										Ngày hội Công nghệ Xanh quy tụ hơn 50 doanh nghiệp tiên phong và các diễn giả hàng đầu trong lĩnh vực phát triển bền vững. Độc giả có thể theo dõi phóng sự truyền thông và tọa đàm podcast trực tiếp.
 									</p>
-									<a href="media.html" class="more">Read more &gt;&gt;</a>
+									<footer>
+										<a href="media.html" class="more">Xem chi tiết &gt;&gt;</a>
+									</footer>
 								</article>
 							</li>
 							<li>
-								<article>
-									<time datetime="2012-01-01" class="time">01-01-2012</time>
-									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE TWO</a></h3>
+								<article class="news-item">
+									<header>
+										<time datetime="2026-04-18" class="time">18-04-2026</time>
+										<h3><a href="media.html" style="color:inherit; text-decoration:none;">XU HƯỚNG BÁO CHÍ ĐA PHƯƠNG TIỆN HIỆN ĐẠI</a></h3>
+									</header>
 									<p>
-										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+										Việc kết hợp bài viết phân tích chiều sâu với video phóng sự và âm thanh podcast đang định hình lại thói quen tiếp nhận thông tin của độc giả thế hệ mới.
 									</p>
-									<a href="media.html" class="more">Read more &gt;&gt;</a>
+									<footer>
+										<a href="media.html" class="more">Xem chi tiết &gt;&gt;</a>
+									</footer>
 								</article>
 							</li>
 							<li>
-								<article>
-									<time datetime="2012-01-01" class="time">01-01-2012</time>
-									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE THREE</a></h3>
+								<article class="news-item">
+									<header>
+										<time datetime="2026-04-15" class="time">15-04-2026</time>
+										<h3><a href="media.html" style="color:inherit; text-decoration:none;">GIẢI PHÁP NĂNG LƯỢNG SẠCH CHO ĐÔ THỊ THÔNG MINH</a></h3>
+									</header>
 									<p>
-										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+										Các nghiên cứu mới nhất chỉ ra rằng việc áp dụng năng lượng tái tạo và vật liệu xanh trong quy hoạch đô thị giúp giảm đáng kể lượng phát thải carbon hàng năm.
 									</p>
-									<a href="media.html" class="more">Read more &gt;&gt;</a>
+									<footer>
+										<a href="media.html" class="more">Xem chi tiết &gt;&gt;</a>
+									</footer>
 								</article>
 							</li>
 							<li>
-								<article>
-									<time datetime="2012-01-01" class="time">01-01-2012</time>
-									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE FOUR</a></h3>
+								<article class="news-item">
+									<header>
+										<time datetime="2026-04-10" class="time">10-04-2026</time>
+										<h3><a href="media.html" style="color:inherit; text-decoration:none;">GIAO LƯU BẠN ĐỌC VÀ TỌA ĐÀM CỘNG ĐỒNG</a></h3>
+									</header>
 									<p>
-										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+										Ban biên tập Blakletterpress tổ chức buổi đối thoại cởi mở cùng các độc giả thân thiết nhằm lắng nghe góp ý và phát triển các chuyên mục hữu ích hơn.
 									</p>
-									<a href="media.html" class="more">Read more &gt;&gt;</a>
+									<footer>
+										<a href="media.html" class="more">Xem chi tiết &gt;&gt;</a>
+									</footer>
 								</article>
 							</li>
 							<li>
-								<article>
-									<time datetime="2012-01-01" class="time">01-01-2012</time>
-									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE FIVE</a></h3>
+								<article class="news-item">
+									<header>
+										<time datetime="2026-04-05" class="time">05-04-2026</time>
+										<h3><a href="media.html" style="color:inherit; text-decoration:none;">KHỞI ĐỘNG CHƯƠNG TRÌNH HỌC BỔNG BÁO CHÍ TRẺ</a></h3>
+									</header>
 									<p>
-										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+										Quỹ phát triển nhân tài báo chí chính thức nhận hồ sơ xét duyệt tài trợ dành cho sinh viên ngành truyền thông và công nghệ thông tin xuất sắc.
 									</p>
-									<a href="media.html" class="more">Read more &gt;&gt;</a>
+									<footer>
+										<a href="media.html" class="more">Xem chi tiết &gt;&gt;</a>
+									</footer>
 								</article>
 							</li>
 						</ul>
 					</section>
 					<nav id="pagination" aria-label="Phân trang tin tức">
-						<a href="news.html">&lt;&lt;</a> <a href="news.html">First</a> <a href="news.html">1</a> <a href="news.html">2</a> <a href="news.html">3</a> <a href="news.html">4</a> <a href="news.html">5</a> <a href="news.html">6</a> <a href="news.html">7</a> <a href="news.html">8</a> <a href="news.html">9</a> <a href="news.html">10</a> <a href="news.html">11</a> <a href="news.html">12</a> <a href="news.html">13</a> <a href="news.html">14</a> <a href="news.html">15</a> <a href="news.html">16</a> <a href="news.html">17</a> <a href="news.html">18</a> <a href="news.html">19</a> <a href="news.html">20</a> <a href="news.html">Last</a> <a href="news.html">&gt;&gt;</a>
+						<a href="news.html">&lt;&lt;</a> <a href="news.html">Đầu</a> <a href="news.html">1</a> <a href="news.html">2</a> <a href="news.html">3</a> <a href="news.html">4</a> <a href="news.html">5</a> <a href="news.html">Cuối</a> <a href="news.html">&gt;&gt;</a>
 					</nav>
 				</div>
 			</main>
@@ -132,24 +158,24 @@
 				</section>
 				<section class="section" aria-labelledby="posts-heading">
 					<div id="posts">
-						<h2 id="posts-heading">Placeholder</h2>
+						<h2 id="posts-heading">Xem Thêm</h2>
 						<ul>
 							<li>
-								<h5>Title Sample One</h5>
+								<h5><a href="media.html" style="color:inherit; text-decoration:none;">Phóng sự hình ảnh hội thảo</a></h5>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ligula vel velit varius
+									Ghi nhận khoảnh khắc ấn tượng tại chuỗi hội thảo chuyên đề khoa học công nghệ.
 								</p>
-								<a href="news.html" class="more">Read more</a>
+								<a href="media.html" class="more">Xem chi tiết</a>
 							</li>
 							<li>
-								<h5>Title Sample One</h5>
+								<h5><a href="register.html" style="color:inherit; text-decoration:none;">Đăng ký nhận thông báo sớm</a></h5>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ligula vel velit varius
+									Nhận bản tóm tắt các sự kiện báo chí quan trọng nhất mỗi sáng sớm qua email.
 								</p>
-								<a href="news.html" class="more">Read more</a>
+								<a href="register.html" class="more">Đăng ký ngay</a>
 							</li>
 						</ul>
-						<a href="news.html" class="btn2">View More</a>
+						<a href="blog.html" class="btn2">View More</a>
 					</div>
 				</section>
 			</aside>
@@ -162,31 +188,31 @@
 					<li>
 						<a href="index.html" class="home" aria-label="Trang chủ"></a>
 						<p>
-							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							Trang chủ cung cấp cái nhìn tổng quan về các hoạt động xuất bản, tiêu điểm trong ngày và tiêu chí biên tập hàng đầu của tòa soạn.
 						</p>
 					</li>
 					<li>
 						<a href="news.html" class="bell" aria-label="Thông báo tin tức"></a>
 						<p>
-							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							Dòng tin thời sự, bản tin đặc biệt và các cập nhật mới nhất được phân loại khoa học theo từng chuyên đề được độc giả quan tâm.
 						</p>
 					</li>
 					<li>
 						<a href="media.html" class="globe" aria-label="Trang truyền thông sự kiện"></a>
 						<p>
-							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							Khám phá nội dung đa phương tiện sinh động với video sự kiện chất lượng cao, podcast thảo luận và tư liệu hình ảnh độc quyền.
 						</p>
 					</li>
 					<li>
 						<a href="register.html" class="pencil" aria-label="Đăng ký nhận thông tin"></a>
 						<p>
-							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							Đăng ký nhận bản tin định kỳ miễn phí vào hộp thư điện tử của bạn để không bỏ lỡ các phân tích chuyên sâu và sự kiện hấp dẫn.
 						</p>
 					</li>
 				</ul>
-				<p id="footnote">
-					&copy; Copyright &copy; 2011. Company name all rights reserved
-				</p>
+				<small id="footnote">
+					&copy; Copyright &copy; 2026 Blakletterpress. Mọi quyền được bảo lưu.
+				</small>
 			</div>
 		</footer>
 	</div>
