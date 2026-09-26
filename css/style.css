@@ -477,3 +477,317 @@ a.sitename {
 	padding: 34px 0;
 	text-align: center;
 }
+
+/*------------------------------ HTML5 SEMANTIC RESETS ------------------------------*/
+header, nav, main, aside, section, article, figure, figcaption, footer, time {
+	display: block;
+}
+
+/*------------------------------ REGISTER FORM STYLES ------------------------------*/
+.form-card {
+	background: #ffffff;
+	border: 1px solid #e2d3be;
+	padding: 24px 30px;
+	margin-bottom: 30px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.page-title {
+	color: #6d4217;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 26px;
+	font-weight: normal;
+	margin: 0 0 10px;
+	text-shadow: 0 1px #fbf3db;
+}
+
+.page-subtitle {
+	color: #4b4b4b;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 0 0 18px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.register-form fieldset {
+	border: 1px solid #8c8c8c;
+	margin: 0 0 18px;
+	padding: 12px 18px 18px;
+	background: #ffffff;
+}
+
+.register-form legend {
+	color: #222222;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 0 6px;
+}
+
+.register-form .form-group {
+	margin: 0 0 10px;
+}
+
+.register-form .form-group label {
+	display: block;
+	color: #222222;
+	font-size: 13px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin: 0 0 4px;
+}
+
+.register-form .form-control {
+	border: 1px solid #7c7c7c;
+	background-color: #ffffff;
+	color: #222222;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 6px;
+	width: 290px;
+	box-sizing: border-box;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.register-form .form-control:focus {
+	border-color: #2f7a26;
+	outline: none;
+	box-shadow: 0 0 4px rgba(47, 122, 38, 0.3);
+}
+
+.register-form .form-control.control-sm {
+	width: 80px;
+}
+
+.register-form .form-control.is-invalid {
+	border-color: #c0392b !important;
+	background-color: #fff9f8;
+}
+
+.register-form select.form-control {
+	height: 26px;
+	padding: 2px 4px;
+	width: 170px;
+}
+
+.register-form textarea.form-control {
+	height: 80px;
+	line-height: 18px;
+	padding: 6px;
+	width: 95%;
+	max-width: 520px;
+	resize: vertical;
+}
+
+.register-form .radio-group,
+.register-form .checkbox-group {
+	margin: 6px 0;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.register-form .inline-option {
+	display: inline-block;
+	margin-right: 18px;
+	color: #222222;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.register-form .inline-option input[type="radio"],
+.register-form .inline-option input[type="checkbox"] {
+	margin: 0 4px 0 0;
+	vertical-align: middle;
+}
+
+.register-form .terms-group {
+	margin: 14px 0 6px;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.register-form .terms-group label {
+	display: inline-block;
+	color: #222222;
+	cursor: pointer;
+}
+
+.register-form .terms-group input[type="checkbox"] {
+	margin-right: 6px;
+	vertical-align: middle;
+}
+
+.register-form .form-actions {
+	margin: 16px 0 6px;
+}
+
+.btn-form-green {
+	background: #1e7518 linear-gradient(to bottom, #2b8c24 0%, #176512 100%);
+	border: 1px solid #114d0c;
+	border-radius: 2px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-weight: bold;
+	height: 25px;
+	line-height: 21px;
+	padding: 1px 14px;
+	margin-right: 8px;
+	text-shadow: 0 1px 1px #0d3809;
+	transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-form-green:hover {
+	background: #258f1e linear-gradient(to bottom, #34a52c 0%, #1c7816 100%);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.error-text {
+	color: #c0392b;
+	display: block;
+	font-size: 12px;
+	font-style: italic;
+	margin-top: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-alert {
+	display: none;
+	padding: 12px 16px;
+	margin-bottom: 18px;
+	border-radius: 3px;
+	font-size: 13px;
+	line-height: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-alert.success {
+	background-color: #eafaf1;
+	border: 1px solid #2ecc71;
+	color: #145a32;
+}
+
+/*------------------------------ MEDIA PAGE STYLES ------------------------------*/
+.media-article {
+	background: #ffffff;
+	border: 1px solid #e2d3be;
+	padding: 24px 30px;
+	margin-bottom: 30px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.media-title {
+	color: #6d4217;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 26px;
+	font-weight: normal;
+	margin: 0 0 8px;
+	text-shadow: 0 1px #fbf3db;
+}
+
+.media-meta {
+	color: #666666;
+	font-size: 12px;
+	margin: 0 0 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.media-meta a {
+	color: #5d3e18;
+	text-decoration: underline;
+}
+
+.media-figure {
+	margin: 0 0 24px;
+	text-align: center;
+}
+
+.media-figure img {
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #dcd1c2;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.media-figure figcaption {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	margin-top: 8px;
+	text-align: center;
+}
+
+.media-heading {
+	color: #222222;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 24px 0 12px;
+	text-align: center;
+}
+
+.media-desc {
+	color: #3b3b3b;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 24px;
+	margin: 0 0 18px;
+	text-align: justify;
+}
+
+.media-desc.center-text {
+	text-align: center;
+}
+
+.media-player-wrapper {
+	text-align: center;
+	margin: 0 0 24px;
+}
+
+.media-player-wrapper video {
+	max-width: 100%;
+	width: 520px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background: #000;
+}
+
+.media-player-wrapper audio {
+	width: 100%;
+	max-width: 480px;
+	margin-top: 6px;
+}
+
+.map-wrapper {
+	text-align: center;
+	margin: 0 0 24px;
+}
+
+.map-wrapper iframe {
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	width: 100%;
+	max-width: 520px;
+	height: 260px;
+}
+
+.media-tags {
+	border-top: 1px dashed #d6ae6a;
+	padding-top: 14px;
+	margin-top: 24px;
+	font-size: 13px;
+	color: #555555;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.media-tags a {
+	color: #197f14;
+	text-decoration: underline;
+}
+
+.media-tags a:hover {
+	color: #bd831e;
+}

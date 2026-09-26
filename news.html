@@ -1,82 +1,110 @@
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
-<html>
+<html lang="vi">
 <head>
 	<meta charset="UTF-8">
-	<title>News - Blakletterpress Website Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Chuyên mục Tin tức của Blakletterpress - Cập nhật nhanh chóng, chính xác các diễn biến thời sự, kinh tế, xã hội và công nghệ mới.">
+	<meta name="keywords" content="tin tức, thời sự, công nghệ, tin nóng, báo điện tử, Blakletterpress">
+	<meta name="robots" content="index, follow">
+	<meta property="og:title" content="Tin tức mới nhất - Blakletterpress">
+	<meta property="og:description" content="Cập nhật dòng tin thời sự và tin tức nổi bật 24/7 từ Blakletterpress.">
+	<meta property="og:image" content="http://dngk2408.id.vn/images/logo.png">
+	<meta property="og:url" content="http://dngk2408.id.vn/news.html">
+	<meta property="og:type" content="website">
+	<link rel="canonical" href="http://dngk2408.id.vn/news.html">
+	<title>Tin tức - Blakletterpress</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
 	<div id="page">
-		<div id="header">
+		<!-- HEADER CHÍNH -->
+		<header id="header">
 			<div id="motto">
-				<a href="index.html" class="sitename"><img src="images/blakletterpress.png" height="24" width="142" alt="SiteName"></a>
+				<a href="index.html" class="sitename"><img src="images/blakletterpress.png" height="24" width="142" alt="Blakletterpress"></a>
 				<p>
-					<img src="images/header-text.png" height="14" width="218" alt="Text">
+					<img src="images/header-text.png" height="14" width="218" alt="Your online source of trusted news">
 				</p>
 			</div>
 			<div id="logo">
-				<a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+				<a href="index.html"><img src="images/logo.png" alt="Logo BLP Blakletterpress"></a>
 			</div>
 			<div id="searchbar">
-				<form action="#" method="post">
-					<input type="text" value="Enter search query" class="txtfield" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+				<form action="#" method="get" role="search">
+					<input type="text" name="q" value="Enter search query" class="txtfield" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';}" aria-label="Tìm kiếm tin tức">
 					<input type="submit" value="Search" class="btn">
 				</form>
 			</div>
-		</div>
+		</header>
+
+		<!-- THÂN TRANG GỒM NỘI DUNG CHÍNH & SIDEBAR -->
 		<div id="contents">
-			<div id="main">
+			<!-- NỘI DUNG CHÍNH (MAIN) -->
+			<main id="main">
 				<div class="body">
-					<ul id="list">
-						<li>
-							<span class="time">01-01-2012</span>
-							<h3>NEWS TITLE ONE</h3>
-							<p>
-								This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
-							</p>
-							<a href="news.html" class="more">Read more >></a>
-						</li>
-						<li>
-							<span class="time">01-01-2012</span>
-							<h3>NEWS TITLE ONE</h3>
-							<p>
-								This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
-							</p>
-							<a href="news.html" class="more">Read more >></a>
-						</li>
-						<li>
-							<span class="time">01-01-2012</span>
-							<h3>NEWS TITLE ONE</h3>
-							<p>
-								This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
-							</p>
-							<a href="news.html" class="more">Read more >></a>
-						</li>
-						<li>
-							<span class="time">01-01-2012</span>
-							<h3>NEWS TITLE ONE</h3>
-							<p>
-								This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
-							</p>
-							<a href="news.html" class="more">Read more >></a>
-						</li>
-						<li>
-							<span class="time">01-01-2012</span>
-							<h3>NEWS TITLE ONE</h3>
-							<p>
-								This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
-							</p>
-							<a href="news.html" class="more">Read more >></a>
-						</li>
-					</ul>
-					<div id="pagination">
+					<h1 style="display:none;">Bản tin mới nhất Blakletterpress</h1>
+					<section id="news-section" aria-label="Danh sách tin tức mới">
+						<ul id="list">
+							<li>
+								<article>
+									<time datetime="2012-01-01" class="time">01-01-2012</time>
+									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE ONE</a></h3>
+									<p>
+										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+									</p>
+									<a href="media.html" class="more">Read more &gt;&gt;</a>
+								</article>
+							</li>
+							<li>
+								<article>
+									<time datetime="2012-01-01" class="time">01-01-2012</time>
+									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE TWO</a></h3>
+									<p>
+										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+									</p>
+									<a href="media.html" class="more">Read more &gt;&gt;</a>
+								</article>
+							</li>
+							<li>
+								<article>
+									<time datetime="2012-01-01" class="time">01-01-2012</time>
+									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE THREE</a></h3>
+									<p>
+										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+									</p>
+									<a href="media.html" class="more">Read more &gt;&gt;</a>
+								</article>
+							</li>
+							<li>
+								<article>
+									<time datetime="2012-01-01" class="time">01-01-2012</time>
+									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE FOUR</a></h3>
+									<p>
+										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+									</p>
+									<a href="media.html" class="more">Read more &gt;&gt;</a>
+								</article>
+							</li>
+							<li>
+								<article>
+									<time datetime="2012-01-01" class="time">01-01-2012</time>
+									<h3><a href="media.html" style="color:inherit; text-decoration:none;">NEWS TITLE FIVE</a></h3>
+									<p>
+										This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+									</p>
+									<a href="media.html" class="more">Read more &gt;&gt;</a>
+								</article>
+							</li>
+						</ul>
+					</section>
+					<nav id="pagination" aria-label="Phân trang tin tức">
 						<a href="news.html">&lt;&lt;</a> <a href="news.html">First</a> <a href="news.html">1</a> <a href="news.html">2</a> <a href="news.html">3</a> <a href="news.html">4</a> <a href="news.html">5</a> <a href="news.html">6</a> <a href="news.html">7</a> <a href="news.html">8</a> <a href="news.html">9</a> <a href="news.html">10</a> <a href="news.html">11</a> <a href="news.html">12</a> <a href="news.html">13</a> <a href="news.html">14</a> <a href="news.html">15</a> <a href="news.html">16</a> <a href="news.html">17</a> <a href="news.html">18</a> <a href="news.html">19</a> <a href="news.html">20</a> <a href="news.html">Last</a> <a href="news.html">&gt;&gt;</a>
-					</div>
+					</nav>
 				</div>
-			</div>
-			<div id="sidebar">
-				<div id="navigation">
+			</main>
+
+			<!-- CỘT BÊN (SIDEBAR) -->
+			<aside id="sidebar" aria-label="Thanh điều hướng và thông tin phụ">
+				<nav id="navigation" aria-label="Menu chính">
 					<div>
 						<ul>
 							<li>
@@ -93,16 +121,18 @@
 							</li>
 						</ul>
 					</div>
-				</div>
-				<div class="section">
+				</nav>
+				<section class="section" aria-labelledby="connect-heading">
 					<div id="connect">
-						<h2>Connect with us:</h2>
-						<a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a> <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a> <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a>
+						<h2 id="connect-heading">Connect with us:</h2>
+						<a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" rel="noopener noreferrer" class="twitter" aria-label="Twitter Blakletterpress"></a>
+						<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" rel="noopener noreferrer" class="facebook" aria-label="Facebook Blakletterpress"></a>
+						<a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" rel="noopener noreferrer" class="googleplus" aria-label="Google Plus Blakletterpress"></a>
 					</div>
-				</div>
-				<div class="section">
+				</section>
+				<section class="section" aria-labelledby="posts-heading">
 					<div id="posts">
-						<h2>Placeholder</h2>
+						<h2 id="posts-heading">Placeholder</h2>
 						<ul>
 							<li>
 								<h5>Title Sample One</h5>
@@ -121,42 +151,44 @@
 						</ul>
 						<a href="news.html" class="btn2">View More</a>
 					</div>
-				</div>
-			</div>
+				</section>
+			</aside>
 		</div>
-		<div id="footer">
+
+		<!-- CHÂN TRANG (FOOTER) -->
+		<footer id="footer">
 			<div>
 				<ul id="featured">
 					<li>
-						<a href="index.html" class="home"></a>
+						<a href="index.html" class="home" aria-label="Trang chủ"></a>
 						<p>
 							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
 						</p>
 					</li>
 					<li>
-						<a href="index.html" class="bell"></a>
+						<a href="news.html" class="bell" aria-label="Thông báo tin tức"></a>
 						<p>
 							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
 						</p>
 					</li>
 					<li>
-						<a href="index.html" class="globe"></a>
+						<a href="media.html" class="globe" aria-label="Trang truyền thông sự kiện"></a>
 						<p>
 							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
 						</p>
 					</li>
 					<li>
-						<a href="index.html" class="pencil"></a>
+						<a href="register.html" class="pencil" aria-label="Đăng ký nhận thông tin"></a>
 						<p>
 							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
 						</p>
 					</li>
 				</ul>
 				<p id="footnote">
-					© Copyright © 2011.Company name all rights reserved
+					&copy; Copyright &copy; 2011. Company name all rights reserved
 				</p>
 			</div>
-		</div>
+		</footer>
 	</div>
 </body>
 </html>
