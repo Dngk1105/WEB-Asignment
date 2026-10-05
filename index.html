@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cây Thư Mục Bài Tập — IT4409 | Hà Tuấn Dũng</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+        .info {
+            color: #475569;
+            font-size: 15px;
+        }
+        .info span {
+            margin-right: 18px;
+        }
+        .tree-container {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 24px 28px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .tree-title {
+            font-weight: 700;
+            font-size: 17px;
+            color: #0f172a;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        ul.tree {
+            list-style: none;
+            padding-left: 20px;
+            font-family: "Consolas", "Monaco", "Courier New", monospace;
+            font-size: 14px;
+        }
+        ul.tree ul {
+            list-style: none;
+            padding-left: 26px;
+            border-left: 1px dashed #94a3b8;
+            margin: 4px 0 8px 10px;
+        }
+        ul.tree li {
+            margin: 6px 0;
+            position: relative;
+        }
+        ul.tree li::before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: -16px;
+            width: 12px;
+            height: 1px;
+            border-top: 1px dashed #94a3b8;
+        }
+        ul.tree > li::before {
+            display: none;
+        }
+        .folder {
+            font-weight: 700;
+            color: #1e40af;
+        }
+        .file {
+            color: #0f172a;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #1d4ed8;
+        }
+        .desc {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #64748b;
+            font-size: 13px;
+            margin-left: 6px;
+        }
+        .highlight {
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: sans-serif;
+            margin-left: 6px;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cổng Bài Tập Môn Học: IT4409 — Lập trình Web</h1>
+        <div class="info">
+            <span><strong>Sinh viên:</strong> Hà Tuấn Dũng</span>
+            <span><strong>GitHub:</strong> <a href="https://github.com/Dngk1105/WEB-Asignment" target="_blank">Dngk1105/WEB-Asignment</a></span>
+            <span><strong>Domain:</strong> <a href="http://dngk2408.id.vn/">dngk2408.id.vn</a></span>
+        </div>
+    </header>
+
+    <div class="tree-container">
+        <div class="tree-title">📁 Cấu trúc cây thư mục bài tập (Bấm vào từng liên kết để mở trang):</div>
+
+        <ul class="tree" style="padding-left: 0;">
+            <li>
+                <span class="folder">📦 WEB-Asignment/</span>
+                <ul>
+                    <!-- ASSIGNMENT 2 -->
+                    <li>
+                        <span class="folder">📁 <a href="./assignment-02/index.html">assignment-02/</a></span> 
+                        <span class="desc">— <strong>Assignment 2: HTML</strong> (Website Báo chí Blakletterpress)</span>
+                        <ul>
+                            <li>
+                                📄 <a href="./assignment-02/index.html">index.html</a>
+                                <span class="desc">— Trang chủ website báo chí</span>
+                                <span class="highlight">Trang chính</span>
+                            </li>
+                            <li>
+                                📄 <a href="./assignment-02/register.html">register.html</a>
+                                <span class="desc">— Form đăng ký thành viên (có validate JS &amp; tự tính tuổi)</span>
+                                <span class="highlight">Đã nộp</span>
+                            </li>
+                            <li>
+                                📄 <a href="./assignment-02/media.html">media.html</a>
+                                <span class="desc">— Trang truyền thông đa phương tiện (phát video MP4 &amp; podcast MP3)</span>
+                                <span class="highlight">Đã nộp</span>
+                            </li>
+                            <li>
+                                📄 <a href="./assignment-02/index_new.html">index_new.html</a>
+                                <span class="desc">— Bản nâng cấp HTML5 Semantic &amp; SEO Meta</span>
+                                <span class="highlight">Đã nộp</span>
+                            </li>
+                            <li>
+                                📄 <a href="./assignment-02/about.html">about.html</a>
+                                <span class="desc">— Trang giới thiệu ban biên tập</span>
+                            </li>
+                            <li>
+                                📄 <a href="./assignment-02/news.html">news.html</a>
+                                <span class="desc">— Trang tổng hợp tin tức thời sự</span>
+                            </li>
+                            <li>
+                                📄 <a href="./assignment-02/blog.html">blog.html</a>
+                                <span class="desc">— Trang bài viết chuyên sâu &amp; diễn đàn</span>
+                            </li>
+                            <li>
+                                📄 <a href="./assignment-02/index_old.html">index_old.html</a>
+                                <span class="desc">— Bản gốc ban đầu để đối chiếu</span>
+                            </li>
+                            <li>
+                                <span class="folder">📁 css/</span>
+                                <ul>
+                                    <li>📄 <a href="./assignment-02/css/style.css">style.css</a> <span class="desc">— Định dạng giao diện báo chí</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="folder">📁 js/</span>
+                                <ul>
+                                    <li>📄 <a href="./assignment-02/js/register.js">register.js</a> <span class="desc">— Mã xử lý kiểm tra form đăng ký</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- ASSIGNMENT 3 -->
+                    <li style="margin-top: 14px;">
+                        <span class="folder">📁 <a href="./assignment-03/index.html">assignment-03/</a></span>
+                        <span class="desc">— <strong>Assignment 3: CSS</strong> (Khuyến mãi thiệp Tết 2026)</span>
+                        <ul>
+                            <li>
+                                📄 <a href="./assignment-03/index.html">index.html</a>
+                                <span class="desc">— Dashboard tổng quan &amp; so sánh 2 bài tập Assignment 3</span>
+                                <span class="highlight">Tổng quan</span>
+                            </li>
+                            <!-- BÀI TẬP 1 -->
+                            <li style="margin-top: 6px;">
+                                <span class="folder">📁 <a href="./assignment-03/bai-tap-1/index.html">bai-tap-1/</a></span>
+                                <span class="desc">— <strong>Bài tập 1: Tự sửa lỗi CSS</strong> (Không dùng AI)</span>
+                                <ul>
+                                    <li>
+                                        📄 <a href="./assignment-03/bai-tap-1/index.html">index.html</a>
+                                        <span class="desc">— Trang chạy với CSS đã sửa hoàn thiện</span>
+                                        <span class="highlight">Bài 1 Live</span>
+                                    </li>
+                                    <li>
+                                        📄 <a href="./assignment-03/bai-tap-1/style.css">style.css</a>
+                                        <span class="desc">— File CSS đã sửa hết 7 lỗi bố cục</span>
+                                    </li>
+                                    <li>
+                                        📄 <a href="./assignment-03/bai-tap-1/style-loi-goc.css">style-loi-goc.css</a>
+                                        <span class="desc">— Bản CSS gốc cài lỗi ban đầu để đối chiếu</span>
+                                    </li>
+                                    <li>
+                                        📄 <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-03/bai-tap-1/phan-tich-loi.md" target="_blank">phan-tich-loi.md</a>
+                                        <span class="desc">— Báo cáo phân tích kỹ thuật chi tiết các lỗi CSS</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- BÀI TẬP 2 -->
+                            <li style="margin-top: 6px;">
+                                <span class="folder">📁 <a href="./assignment-03/bai-tap-2/index.html">bai-tap-2/</a></span>
+                                <span class="desc">— <strong>Bài tập 2: Sửa lỗi bằng Prompt GenAI</strong></span>
+                                <ul>
+                                    <li>
+                                        📄 <a href="./assignment-03/bai-tap-2/index.html">index.html</a>
+                                        <span class="desc">— Trang chạy với CSS đã sửa theo kết quả GenAI</span>
+                                        <span class="highlight">Bài 2 Live</span>
+                                    </li>
+                                    <li>
+                                        📄 <a href="./assignment-03/bai-tap-2/style.css">style.css</a>
+                                        <span class="desc">— File CSS đã sửa bẫy overflow/clip, stacking context &amp; bảo vệ code</span>
+                                    </li>
+                                    <li>
+                                        📄 <a href="./assignment-03/bai-tap-2/style-loi-goc.css">style-loi-goc.css</a>
+                                        <span class="desc">— Bản CSS gốc cài lỗi tinh vi để đối chiếu</span>
+                                    </li>
+                                    <li>
+                                        📄 <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-03/bai-tap-2/prompt-ai.md" target="_blank">prompt-ai.md</a>
+                                        <span class="desc">— Bộ Prompt chuyên gia &amp; báo cáo giải trình</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- TÀI LIỆU KHÁC -->
+                    <li style="margin-top: 14px;">
+                        📄 <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/README.md" target="_blank">README.md</a>
+                        <span class="desc">— Tài liệu hướng dẫn và cấu trúc toàn bộ repository</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hà Tuấn Dũng — Học phần IT4409 (Lập trình Web) | HUST</p>
+    </footer>
+
+</body>
+</html>
