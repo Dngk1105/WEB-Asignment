@@ -18,16 +18,8 @@ WEB-Asignment/
 ├── .nojekyll                       # Ngăn Jekyll xử lý file
 ├── CNAME                           # Custom domain: dngk2408.id.vn
 │
-├── index.html                      # [COURSE PORTAL HUB] - Dashboard trung tâm
+├── index.html                      # [CÂY THƯ MỤC BÀI TẬP] - Trang chính HTML thuần
 ├── 404.html                        # Trang 404 điều hướng thông minh
-├── assets/                         # CSS & JS riêng cho Course Portal Hub
-│
-│   # === BỘ TƯƠNG THÍCH NGƯỢC (REDIRECT STUBS) ===
-├── register.html                   # Auto-redirect -> ./assignment-02/register.html
-├── media.html                      # Auto-redirect -> ./assignment-02/media.html
-├── index_new.html                  # Auto-redirect -> ./assignment-02/index_new.html
-├── index_old.html                  # Auto-redirect -> ./assignment-02/index_old.html
-├── about.html, news.html, blog.html...
 │
 │   # === ASSIGNMENT 2: HTML ===
 ├── assignment-02/                  # [Module độc lập Assignment 2]
