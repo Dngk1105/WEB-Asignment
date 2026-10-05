@@ -1,14 +1,7 @@
-/* =====================================================================
-   Blakletterpress — Trang khuyến mãi thiệp Tết 2026
-   HOẠT ĐỘNG 1 — CSS ĐÃ ĐƯỢC SỬA LỖI HOÀN THIỆN
-   (Tự thực hiện, không dùng AI theo đúng yêu cầu đề bài)
-   Lưu ý: Bản gốc cài lỗi được lưu tại file `style-loi-goc.css`.
-   ===================================================================== */
-
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; /* Sửa lỗi box-sizing: giúp padding và border không làm tăng width của thẻ */
+	box-sizing: border-box;
 }
 
 body {
@@ -22,12 +15,11 @@ a {
 	color: inherit;
 }
 
-/* ===== Header / thanh điều hướng ===== */
 .site-header {
 	background: #2b2b2b;
 	position: sticky;
-	top: 0;          /* Sửa lỗi 1: Thêm top: 0 để menu bám dính khi cuộn */
-	z-index: 100;    /* Sửa lỗi 1: Đảm bảo menu luôn nổi trên ảnh hero */
+	top: 0;
+	z-index: 100;
 }
 
 .header-inner {
@@ -61,9 +53,8 @@ a {
 	color: #fff;
 }
 
-/* ===== Hero ===== */
 .hero {
-	position: relative; /* Sửa lỗi 2: Tạo mốc tọa độ tương đối cho .hero-overlay căn giữa */
+	position: relative;
 	height: 360px;
 	overflow: hidden;
 }
@@ -71,14 +62,14 @@ a {
 .hero-bg {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;  /* Sửa lỗi 2: Ảnh hero phủ kín khung không bị méo tỉ lệ */
+	object-fit: cover;
 }
 
 .hero-overlay {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%); /* Căn giữa chính xác */
+	transform: translate(-50%, -50%);
 	width: 80%;
 	max-width: 560px;
 	text-align: center;
@@ -106,7 +97,6 @@ a {
 	border-radius: 4px;
 }
 
-/* ===== Khu sản phẩm ===== */
 .products {
 	max-width: 1000px;
 	margin: 48px auto;
@@ -126,8 +116,8 @@ a {
 
 .card {
 	flex: 0 0 calc((100% - 48px) / 3);
-	min-height: 320px;  /* Sửa lỗi 3: Dùng min-height thay vì height: 300px cố định để không tràn chữ */
-	position: relative; /* Sửa lỗi 3: Làm mốc tọa độ cho nhãn -20% nằm ở góc trên bên phải thẻ */
+	min-height: 320px;
+	position: relative;
 	background: #fff;
 	border: 1px solid #e0d8c8;
 	border-radius: 8px;
@@ -150,9 +140,9 @@ a {
 
 .card img {
 	display: block;
-	width: 100%;       /* Sửa lỗi 3: Ảnh nằm gọn trong thẻ card */
-	height: 180px;     /* Đồng đều chiều cao */
-	object-fit: cover; /* Không bị biến dạng */
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
 	border-radius: 4px;
 }
 
@@ -173,10 +163,9 @@ a {
 	font-size: 18px;
 }
 
-/* ===== Nút lên đầu trang ===== */
 .back-to-top {
 	position: fixed;
-	bottom: 24px; /* Sửa lỗi 4: Đổi từ top: 24px sang bottom: 24px ở góc dưới bên phải màn hình */
+	bottom: 24px;
 	right: 24px;
 	width: 48px;
 	height: 48px;
@@ -190,7 +179,6 @@ a {
 	z-index: 200;
 }
 
-/* ===== Footer ===== */
 .site-footer {
 	margin-top: 48px;
 	padding: 32px 24px;

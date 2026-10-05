@@ -8,7 +8,7 @@
 
 ---
 
-## 📁 Cấu trúc Repository (Kiến trúc Micro-Sites)
+## Cấu trúc Repository
 
 Mỗi bài tập (Assignment) là một "Mini-Site" hoàn chỉnh độc lập, có mã nguồn, CSS, JS và tài nguyên riêng biệt. Khi thêm bài tập mới, các bài tập cũ được bảo đảm 100% không bị thay đổi đường dẫn hay ảnh hưởng giao diện.
 
@@ -21,7 +21,7 @@ WEB-Asignment/
 ├── index.html                      # [CÂY THƯ MỤC BÀI TẬP] - Trang chính HTML thuần
 ├── 404.html                        # Trang 404 điều hướng thông minh
 │
-│   # === ASSIGNMENT 2: HTML ===
+│ 
 ├── assignment-02/                  # [Module độc lập Assignment 2]
 │   ├── index.html                  # Trang chủ Website Báo chí Blakletterpress
 │   ├── register.html               # Form đăng ký có JS validate & tính tuổi
@@ -31,7 +31,7 @@ WEB-Asignment/
 │   ├── js/register.js              # JS validate form
 │   ├── images/, fonts/, media/     # Tài nguyên độc lập
 │
-│   # === ASSIGNMENT 3: CSS ===
+│ 
 ├── assignment-03/                  # [Module độc lập Assignment 3]
 │   ├── index.html                  # Dashboard tổng quan & so sánh Assignment 3
 │   ├── README.md                   # Báo cáo tổng kết Assignment 3
@@ -55,7 +55,7 @@ WEB-Asignment/
 
 ---
 
-## 🚀 Danh mục Bài tập & Liên kết Nộp bài
+## Danh mục Bài tập & Liên kết Nộp bài
 
 ### 1. [Assignment 2: Semantic HTML5 & Báo Chí Blakletterpress](./assignment-02/)
 - **Trực tiếp:** [https://dngk2408.id.vn/assignment-02/](https://dngk2408.id.vn/assignment-02/)
@@ -73,7 +73,7 @@ WEB-Asignment/
 
 ---
 
-## 🛠 Hướng dẫn thêm bài tập mới (Tuần tiếp theo)
+## Hướng dẫn thêm bài tập mới (Tuần tiếp theo)
 Khi có bài tập mới (ví dụ Assignment 4), bạn chỉ cần làm 2 bước:
 1. Tạo thư mục mới: `assignment-04/` và đặt toàn bộ file bài tập vào đó.
 2. Mở `index.html` tại root, cập nhật thẻ `Assignment 4` thành trạng thái "Đã Hoàn Thành" kèm liên kết trỏ tới `./assignment-04/`.
