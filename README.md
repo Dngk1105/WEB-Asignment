@@ -19,8 +19,8 @@ WEB-Asignment/
 ├── CNAME                           # Custom domain: dngk2408.id.vn
 │
 ├── index.html                      # [CÂY THƯ MỤC BÀI TẬP] - Trang chính HTML thuần
+├── register.html, media.html...    # Các file chuyển hướng (redirect) về Assignment 2
 ├── 404.html                        # Trang 404 điều hướng thông minh
-│
 │ 
 ├── assignment-02/                  # [Module độc lập Assignment 2]
 │   ├── index.html                  # Trang chủ Website Báo chí Blakletterpress
@@ -33,18 +33,20 @@ WEB-Asignment/
 │
 │ 
 ├── assignment-03/                  # [Module độc lập Assignment 3]
-│   ├── index.html                  # Dashboard tổng quan & so sánh Assignment 3
+│   ├── index.html                  # Cây thư mục điều hướng Assignment 3
 │   ├── README.md                   # Báo cáo tổng kết Assignment 3
 │   │
 │   ├── bai-tap-1/                  # Bài tập 1: Tự sửa lỗi (Không dùng AI)
-│   │   ├── index.html              # Trang web đã sửa lỗi (HTML nguyên gốc)
-│   │   ├── style.css               # CSS đã sửa hoàn chỉnh
-│   │   ├── style-loi-goc.css       # CSS gốc bị lỗi để đối chứng
+│   │   ├── index.html              # Trang diff so sánh & phân tích lỗi CSS
+│   │   ├── trang.html              # Trang web chạy với CSS đã sửa
+│   │   ├── style_new.css           # CSS đã sửa hoàn chỉnh
+│   │   ├── style_old.css           # CSS gốc bị lỗi để đối chứng
 │   │   ├── images/                 # Ảnh sản phẩm và hero
 │   │   └── phan-tich-loi.md        # Báo cáo phân tích kỹ thuật
 │   │
 │   └── bai-tap-2/                  # Bài tập 2: Sửa lỗi dùng Prompt GenAI
-│       ├── index.html              # Trang web đã sửa lỗi (HTML nguyên gốc)
+│       ├── index.html              # Trang web chạy với CSS đã sửa
+│       ├── trang.html              # File HTML gốc
 │       ├── style.css               # CSS đã sửa theo kết quả GenAI
 │       ├── style-loi-goc.css       # CSS gốc bị lỗi để đối chứng
 │       ├── images/                 # Ảnh sản phẩm và hero
@@ -67,7 +69,8 @@ WEB-Asignment/
 ### 2. [Assignment 3: CSS — Chẩn đoán & Sửa lỗi Bố cục](./assignment-03/)
 - **Trực tiếp Hub:** [https://dngk2408.id.vn/assignment-03/](https://dngk2408.id.vn/assignment-03/)
 - **Bài tập 1 (Tự sửa lỗi):** [https://dngk2408.id.vn/assignment-03/bai-tap-1/](https://dngk2408.id.vn/assignment-03/bai-tap-1/)
-  - [Báo cáo phân tích chi tiết lỗi CSS](./assignment-03/bai-tap-1/phan-tich-loi.md)
+  - [Trang demo web (trang.html)](https://dngk2408.id.vn/assignment-03/bai-tap-1/trang.html)
+  - [Báo cáo phân tích chi tiết & Diff CSS](./assignment-03/bai-tap-1/phan-tich-loi.md)
 - **Bài tập 2 (Prompt GenAI):** [https://dngk2408.id.vn/assignment-03/bai-tap-2/](https://dngk2408.id.vn/assignment-03/bai-tap-2/)
   - [Bộ Prompt chuyên gia & Báo cáo kỹ thuật](./assignment-03/bai-tap-2/prompt-ai.md)
 

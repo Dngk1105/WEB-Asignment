@@ -1,81 +1,428 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Khuyến mãi thiệp Tết 2026 — Blakletterpress</title>
-	<link rel="stylesheet" href="style_new.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 1: Sửa lỗi CSS (Không dùng AI) - Dunght</title>
+    <style>
+        body {
+            font-family: 'CaskaydiaCove Nerd Font Mono', monospace;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 30px 20px;
+            max-width: 960px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .back-nav {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .back-nav a {
+            color: #2563eb;
+            text-decoration: none;
+            margin-right: 16px;
+        }
+
+        .back-nav a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .info {
+            color: #475569;
+            font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .box-container {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 24px 28px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
+        }
+
+        .box-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0f172a;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        /* Table styles */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        th {
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 10px 12px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        td {
+            padding: 10px 12px;
+            border: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+
+        tr:hover td {
+            background: #f8fafc;
+        }
+
+        code {
+            font-family: 'CaskaydiaCove Nerd Font Mono', monospace;
+            background: #f1f5f9;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #0f172a;
+        }
+
+        /* Diff viewer styles */
+        .diff-legend {
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .legend-add {
+            color: #1a7f37;
+            background: #e6ffec;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .legend-del {
+            color: #cf222e;
+            background: #ffebe9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .diff-code-wrapper {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .diff-code-header {
+            background: #f1f5f9;
+            padding: 8px 14px;
+            border-bottom: 1px solid #cbd5e1;
+            font-size: 12px;
+            color: #475569;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        pre.diff-code {
+            margin: 0;
+            padding: 12px 0;
+            font-family: 'CaskaydiaCove Nerd Font Mono', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        .diff-line {
+            display: block;
+            padding: 0 16px;
+            white-space: pre;
+        }
+
+        .diff-header-line {
+            color: #0969da;
+            font-weight: 700;
+            margin-top: 10px;
+            padding-top: 6px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        .diff-header-line:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .diff-add {
+            background-color: #e6ffec;
+            color: #1a7f37;
+            border-left: 3px solid #2da44e;
+        }
+
+        .diff-del {
+            background-color: #ffebe9;
+            color: #cf222e;
+            border-left: 3px solid #cf222e;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1d4ed8;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
 </head>
+
 <body>
-	<header class="site-header">
-		<div class="header-inner">
-			<a href="#" class="brand">Blakletterpress</a>
-			<nav class="main-nav">
-				<ul>
-					<li><a href="#bo-suu-tap">Bộ sưu tập</a></li>
-					<li><a href="#uu-dai">Ưu đãi</a></li>
-					<li><a href="#lien-he">Liên hệ</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
 
-	<section class="hero">
-		<img class="hero-bg" src="./images/team-large.jpg" alt="Xưởng in letterpress Blakletterpress">
-		<div class="hero-overlay">
-			<h1>Thiệp Tết 2026 in thủ công</h1>
-			<p>Ép chìm trên giấy cotton — giảm đến 20% cho đơn đặt trước Tết.</p>
-			<a href="#bo-suu-tap" class="hero-btn">Xem bộ sưu tập</a>
-		</div>
-	</section>
+    <header>
+        <div class="back-nav">
+            <a href="../index.html">← Về Assignment 03</a>
+            <a href="../../index.html">← Về Trang chủ</a>
+        </div>
+        <h1>Bài tập 1: Sửa lỗi CSS (Không dùng AI)</h1>
+        <div class="info">
+            <span><strong>Hà Tuấn Dũng - 20235299</strong></span>
+            <span><strong>Trang đã sửa:</strong> <a href="./trang.html" target="_blank">trang.html ↗</a></span>
+            <span><strong>File CSS:</strong> <a href="./style_old.css" target="_blank">style_old.css</a> | <a
+                    href="./style_new.css" target="_blank">style_new.css</a></span>
+            <span><strong>GitHub:</strong> <a
+                    href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-03/bai-tap-1/phan-tich-loi.md"
+                    target="_blank">phan-tich-loi.md</a></span>
+        </div>
+    </header>
 
-	<main>
-		<section id="bo-suu-tap" class="products">
-			<h2>Bộ sưu tập nổi bật</h2>
-			<div class="card-list">
+    <!-- TRANG ĐÃ SỬA LỖI -->
+    <div class="box-container" style="padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: #f0fdf4; border-color: #bbf7d0;">
+        <span style="color: #166534;"><strong>Trang web sau khi sửa lỗi:</strong> <a href="./trang.html" target="_blank" style="color: #15803d; font-weight: 700; text-decoration: underline;">trang.html</a></span>
+        <a href="./trang.html" target="_blank" style="color: #15803d; font-weight: 700;">Xem trang đã sửa ↗</a>
+    </div>
 
-				<article class="card">
-					<span class="badge">-20%</span>
-					<img src="./images/smiling.jpg" alt="Thiệp Xuân An">
-					<div class="card-body">
-						<h3>Thiệp &laquo;Xuân An&raquo;</h3>
-						<p>Giấy cotton 300gsm, ép chìm hoa văn cổ truyền, viền mạ nhũ vàng thủ công từng tấm.</p>
-						<p>Hộp giấy kraft kèm phong bì cùng tông, phù hợp làm quà biếu.</p>
-						<p class="price">120.000đ</p>
-					</div>
-				</article>
+    <!-- BẢNG TỔNG HỢP LỖI -->
+    <div class="box-container">
+        <div class="box-title">
+            <span>Bảng tổng hợp các lỗi phát hiện và giải pháp khắc phục</span>
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 45px; text-align: center;">STT</th>
+                        <th style="width: 160px;">Thành phần</th>
+                        <th>Hiện tượng lỗi ban đầu</th>
+                        <th>Nguyên nhân kỹ thuật trong CSS</th>
+                        <th>Giải pháp khắc phục</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">1</td>
+                        <td><strong>Menu điều hướng</strong><br><code>.site-header</code></td>
+                        <td>Cuộn trang menu trôi mất, khi trượt qua ảnh hero bị ảnh đè lên che mất menu</td>
+                        <td>Thuộc tính <code>position: sticky</code> thiếu giá trị ngưỡng kích hoạt <code>top: 0</code>;
+                            thiếu <code>z-index</code> so với <code>.hero-overlay</code> (<code>z-index: 5</code>)</td>
+                        <td>Thêm <code>top: 0;</code> để kích hoạt dính; thêm <code>z-index: 100;</code> để luôn nổi
+                            trên lớp ảnh</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">2</td>
+                        <td><strong>Hero Banner</strong><br><code>.hero</code>, <code>.hero-bg</code></td>
+                        <td>Chữ tiêu đề bị lệch khỏi khung ảnh hero; ảnh nền bị méo tỉ lệ</td>
+                        <td>1) Khung cha <code>.hero</code> không khai báo <code>position: relative</code>, khiến lớp
+                            con <code>.hero-overlay</code> (<code>position: absolute</code>) phải căn theo thẻ
+                            <code>body</code>/viewport toàn trang.<br>2) <code>.hero-bg</code> thiếu thuộc tính giữ tỉ
+                            lệ <code>object-fit</code></td>
+                        <td>1) Thêm <code>position: relative;</code> cho <code>.hero</code> để làm mốc tọa độ.<br>2)
+                            Thêm <code>object-fit: cover;</code> cho <code>.hero-bg</code></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">3</td>
+                        <td><strong>Độ rộng 3 thẻ sản phẩm</strong><br><code>.card</code></td>
+                        <td>Ba thẻ bị rớt dòng (vỡ hàng), không nằm trên một hàng ngang</td>
+                        <td>Toàn cục chưa khai báo <code>box-sizing: border-box</code>. Khi <code>.card</code> có
+                            <code>padding: 16px</code> và <code>border: 1px</code>, mỗi thẻ bị cộng thêm 34px vào chiều
+                            ngang khiến tổng chiều rộng 3 thẻ vượt quá 100%</td>
+                        <td>Áp dụng <code>box-sizing: border-box;</code> cho <code>*</code> (hoặc trực tiếp cho
+                            <code>.card</code>)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">4</td>
+                        <td><strong>Chiều cao thẻ</strong><br><code>.card</code></td>
+                        <td>Nội dung chữ bên dưới thẻ bị tràn ra ngoài khung</td>
+                        <td>Thẻ <code>.card</code> bị cố định cứng <code>height: 300px</code> trong khi nội dung thực tế
+                            dài hơn</td>
+                        <td>Chuyển sang <code>min-height: 320px</code> để khung co giãn linh hoạt theo nội dung</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">5</td>
+                        <td><strong>Nhãn giảm giá</strong><br><code>.badge</code></td>
+                        <td>Nhãn "-20%" bị bay ra tít góc trên màn hình hoặc lệch khỏi thẻ</td>
+                        <td>Thẻ <code>.card</code> thiếu <code>position: relative</code>, khiến <code>.badge</code>
+                            (<code>position: absolute; top: 12px; right: 12px;</code>) căn theo body</td>
+                        <td>Thêm <code>position: relative;</code> cho <code>.card</code> để nhãn bám chuẩn vào góc trên
+                            bên phải của chính thẻ đó</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">6</td>
+                        <td><strong>Ảnh sản phẩm</strong><br><code>.card img</code></td>
+                        <td>Ảnh giữ nguyên kích cỡ gốc, tràn ra ngoài viền thẻ</td>
+                        <td><code>.card img</code> chỉ có <code>display: block</code> mà không giới hạn kích thước theo
+                            thẻ cha</td>
+                        <td>Thêm <code>width: 100%; height: 180px; object-fit: cover; border-radius: 4px;</code></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">7</td>
+                        <td><strong>Nút cuộn trang</strong><br><code>.back-to-top</code></td>
+                        <td>Nút "↑" nằm ở góc TRÊN bên phải màn hình thay vì góc dưới</td>
+                        <td>CSS ban đầu khai báo <code>top: 24px;</code></td>
+                        <td>Sửa thành <code>bottom: 24px;</code> và bổ sung <code>z-index: 200;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-				<article class="card">
-					<span class="badge">-20%</span>
-					<img src="./images/ecofriends.jpg" alt="Thiệp Lộc Xuân">
-					<div class="card-body">
-						<h3>Thiệp &laquo;Lộc Xuân&raquo;</h3>
-						<p>Tông đỏ truyền thống, in letterpress hai màu, chữ thư pháp dập nổi.</p>
-						<p>Đặt tối thiểu 10 tấm được khắc tên riêng miễn phí.</p>
-						<p class="price">135.000đ</p>
-					</div>
-				</article>
+    <!-- SO SÁNH DIFF MÃ NGUỒN CSS -->
+    <div class="box-container">
+        <div class="box-title">
+            <span>Đoạn mã CSS đã sửa đổi chi tiết (style_old.css → style_new.css)</span>
+            <span class="diff-legend">
+                <span class="legend-add">+ Thêm mới</span> &nbsp;
+                <span class="legend-del">- Đã xóa</span>
+            </span>
+        </div>
+        <div class="diff-code-wrapper">
+            <div class="diff-code-header">
+                <span>diff --git a/style_old.css b/style_new.css</span>
+                <span>
+                    <a href="./trang.html" target="_blank">Xem trang đã sửa (trang.html) ↗</a>
+                </span>
+            </div>
+            <pre class="diff-code"><code><span class="diff-line diff-header-line">/* 1. Chuẩn hóa Box Model */</span>
+<span class="diff-line"> * {</span>
+<span class="diff-line"> 	margin: 0;</span>
+<span class="diff-line"> 	padding: 0;</span>
+<span class="diff-line diff-add">+	box-sizing: border-box;</span>
+<span class="diff-line"> }</span>
 
-				<article class="card">
-					<span class="badge">-20%</span>
-					<img src="./images/meeting.jpg" alt="Thiệp Phú Quý">
-					<div class="card-body">
-						<h3>Thiệp &laquo;Phú Quý&raquo;</h3>
-						<p>Giấy đen than, mực nhũ đồng, hoạ tiết mai đào tối giản theo phong cách hiện đại.</p>
-						<p>Kèm thiệp con để viết lời chúc bên trong.</p>
-						<p class="price">150.000đ</p>
-					</div>
-				</article>
+<span class="diff-line diff-header-line">/* 2. Menu dính trên đỉnh khi cuộn và nổi trên hero */</span>
+<span class="diff-line"> .site-header {</span>
+<span class="diff-line"> 	background: #2b2b2b;</span>
+<span class="diff-line"> 	position: sticky;</span>
+<span class="diff-line diff-add">+	top: 0;</span>
+<span class="diff-line diff-add">+	z-index: 100;</span>
+<span class="diff-line"> }</span>
 
-			</div>
-		</section>
-	</main>
+<span class="diff-line diff-header-line">/* 3. Hero làm mốc tọa độ và ảnh phủ kín khung */</span>
+<span class="diff-line"> .hero {</span>
+<span class="diff-line diff-add">+	position: relative;</span>
+<span class="diff-line"> 	height: 360px;</span>
+<span class="diff-line"> 	overflow: hidden;</span>
+<span class="diff-line"> }</span>
+<span class="diff-line"> .hero-bg {</span>
+<span class="diff-line"> 	width: 100%;</span>
+<span class="diff-line"> 	height: 100%;</span>
+<span class="diff-line diff-add">+	object-fit: cover;</span>
+<span class="diff-line"> }</span>
 
-	<a href="#" class="back-to-top" aria-label="Lên đầu trang">↑</a>
+<span class="diff-line diff-header-line">/* 4. Thẻ sản phẩm: Bỏ cố định height, làm mốc cho badge */</span>
+<span class="diff-line"> .card {</span>
+<span class="diff-line"> 	flex: 0 0 calc((100% - 48px) / 3);</span>
+<span class="diff-line diff-del">-	height: 300px;</span>
+<span class="diff-line diff-add">+	min-height: 320px;</span>
+<span class="diff-line diff-add">+	position: relative;</span>
+<span class="diff-line"> 	background: #fff;</span>
+<span class="diff-line"> 	border: 1px solid #e0d8c8;</span>
+<span class="diff-line"> 	border-radius: 8px;</span>
+<span class="diff-line"> 	padding: 16px;</span>
+<span class="diff-line"> 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);</span>
+<span class="diff-line"> }</span>
 
-	<footer id="lien-he" class="site-footer">
-		<p>© 2026 Blakletterpress — Xưởng in letterpress thủ công, Hà Nội.</p>
-		<p>Hotline đặt hàng: 024&nbsp;xxxx&nbsp;xxxx.</p>
-	</footer>
+<span class="diff-line diff-header-line">/* 5. Nhãn -20% nổi trên ảnh */</span>
+<span class="diff-line"> .badge {</span>
+<span class="diff-line"> 	position: absolute;</span>
+<span class="diff-line"> 	top: 12px;</span>
+<span class="diff-line"> 	right: 12px;</span>
+<span class="diff-line"> 	background: #c0392b;</span>
+<span class="diff-line"> 	color: #fff;</span>
+<span class="diff-line"> 	font-size: 14px;</span>
+<span class="diff-line"> 	font-weight: bold;</span>
+<span class="diff-line"> 	padding: 4px 10px;</span>
+<span class="diff-line"> 	border-radius: 20px;</span>
+<span class="diff-line diff-add">+	z-index: 10;</span>
+<span class="diff-line"> }</span>
+
+<span class="diff-line diff-header-line">/* 6. Ảnh nằm gọn vừa vặn trong thẻ */</span>
+<span class="diff-line"> .card img {</span>
+<span class="diff-line"> 	display: block;</span>
+<span class="diff-line diff-add">+	width: 100%;</span>
+<span class="diff-line diff-add">+	height: 180px;</span>
+<span class="diff-line diff-add">+	object-fit: cover;</span>
+<span class="diff-line diff-add">+	border-radius: 4px;</span>
+<span class="diff-line"> }</span>
+
+<span class="diff-line diff-header-line">/* 7. Nút back-to-top ở góc dưới bên phải màn hình */</span>
+<span class="diff-line"> .back-to-top {</span>
+<span class="diff-line"> 	position: fixed;</span>
+<span class="diff-line diff-del">-	top: 24px;</span>
+<span class="diff-line diff-add">+	bottom: 24px;</span>
+<span class="diff-line"> 	right: 24px;</span>
+<span class="diff-line"> 	width: 48px;</span>
+<span class="diff-line"> 	height: 48px;</span>
+<span class="diff-line"> 	background: #2b2b2b;</span>
+<span class="diff-line"> 	color: #fff;</span>
+<span class="diff-line"> 	text-align: center;</span>
+<span class="diff-line"> 	line-height: 48px;</span>
+<span class="diff-line"> 	font-size: 22px;</span>
+<span class="diff-line"> 	text-decoration: none;</span>
+<span class="diff-line"> 	border-radius: 50%;</span>
+<span class="diff-line diff-add">+	z-index: 200;</span>
+<span class="diff-line"> }</span></code></pre>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hà Tuấn Dũng — Học phần IT4409 (Lập trình Web) | HUST</p>
+    </footer>
+
 </body>
+
 </html>

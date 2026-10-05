@@ -21,19 +21,13 @@ Tôi có một trang web khuyến mãi Tết 2026 đang gặp một số lỗi C
 Mã nguồn HTML đã chuẩn semantic và KHÔNG ĐƯỢC PHÉP THAY ĐỔI.
 
 Dưới đây là mã nguồn HTML (`trang.html`) và CSS (`style-loi.css`):
-[DÁN CODE trang.html VÀ style-loi.css VÀO ĐÂY]
+assignment-03\bai-tap-2\trang.html
+assignment-03\bai-tap-2\style-loi-goc.css
 
 ### YÊU CẦU HIỂN THỊ ĐÚNG CỦA BÀI TOÁN:
-1. Menu điều hướng (`.site-header`): Phải DÍNH LẠI trên đỉnh màn hình khi cuộn trang (`position: sticky`) và luôn nằm trên ảnh.
-   - CHÚ Ý: Kiểm tra kỹ toàn bộ các thẻ cha bọc menu (ví dụ `.page`) xem có thuộc tính nào triệt tiêu cơ chế sticky của trình duyệt không.
-2. Ảnh hero (`.hero-bg`) và tiêu đề (`.hero-overlay`): Ảnh phủ kín khung, tiêu đề căn chính giữa ảnh.
-   - BẢO VỆ ĐOẠN CODE ĐÚNG: Giữ nguyên `transform: scale(1.08)` trên `.hero-bg`.
-3. Ba thẻ sản phẩm (`.card`): Xếp thành MỘT HÀNG NGANG (`flex`), ảnh và chữ nằm gọn trong thẻ.
-   - CHÚ Ý: Kiểm tra kỹ thuộc tính `box-sizing` trên `.card` có bị ghi đè gây rớt hàng không.
-   - Nhãn "-20%" (`.badge`): Phải nằm ở góc trên bên phải của chính thẻ đó VÀ LUÔN NỔI LÊN TRÊN ảnh sản phẩm.
-   - CHÚ Ý STACKING CONTEXT: Ảnh `.card img` đang có `position: relative; z-index: 2;`. Hãy đảm bảo `.badge` có `z-index` phù hợp để không bị ảnh đè lên che khuất.
-   - BẢO VỆ ĐOẠN CODE ĐÚNG: Giữ nguyên hiệu ứng `margin: -48px auto 48px;` và bo góc trên của `.products` (đây là thiết kế thẻ nổi đè lên hero, KHÔNG ĐƯỢC XÓA).
-4. Nút "↑" (`.back-to-top`): Nổi cố định ở góc dưới bên phải màn hình khi cuộn.
+Xem lại mô tả trong 2 file 
+assignment-03\bai-tap-1\style_old.css
+assignment-03\bai-tap-2\style-loi-goc.css
 
 ### ĐẦU RA YÊU CẦU:
 1. Chỉ ra chính xác các dòng code lỗi, giải thích cơ chế trình duyệt dẫn đến lỗi đó.

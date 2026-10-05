@@ -1,3 +1,17 @@
+/* =====================================================================
+   Blakletterpress — Trang khuyến mãi thiệp Tết 2026
+   HOẠT ĐỘNG 1 — CSS ĐÃ CÀI LỖI (chủ đề: Box model + Position).
+
+   Trang này đáng lẽ hiển thị như sau:
+   - Thanh menu trên cùng DÍNH lại khi cuộn (sticky) và luôn nằm trên ảnh.
+   - Ảnh hero phủ kín khung, chữ tiêu đề nằm CHÍNH GIỮA ảnh.
+   - Ba thẻ sản phẩm xếp thành MỘT HÀNG, mỗi thẻ có nhãn "-20%" ở GÓC TRÊN
+     BÊN PHẢI của chính thẻ đó; ảnh và chữ nằm gọn trong thẻ.
+   - Nút "↑" nổi cố định ở GÓC DƯỚI BÊN PHẢI màn hình khi cuộn.
+
+   Hiện tại bố cục đang VỠ. Nhiệm vụ của bạn (KHÔNG dùng AI): tìm và sửa
+   các lỗi box model / position để trang hiển thị đúng như mô tả trên.
+   ===================================================================== */
 * {
 	margin: 0;
 	padding: 0;
