@@ -1,20 +1,4 @@
-# BÁO CÁO PHÂN TÍCH VÀ SỬA LỖI CSS — BÀI TẬP 1 (ASSIGNMENT 3)
-**Học phần:** IT4409 - Lập trình Web  
-**Sinh viên thực hiện:** Hà Tuấn Dũng  
-**Phương pháp:** Tự chẩn đoán và khắc phục lỗi trực tiếp (Không dùng AI)
-
----
-
-## 1. Yêu cầu đề bài đối với trang web
-1. **Menu trên cùng**: Dính lại khi cuộn (`sticky`) và luôn nằm trên ảnh hero.
-2. **Ảnh hero**: Phủ kín khung, tiêu đề nằm chính giữa ảnh.
-3. **Ba thẻ sản phẩm**: Xếp thành một hàng ngang; mỗi thẻ có nhãn "-20%" ở góc trên bên phải của chính thẻ đó; ảnh và chữ nằm gọn trong thẻ.
-4. **Nút "↑"**: Nổi cố định ở góc dưới bên phải màn hình khi cuộn trang.
-5. **Ràng buộc:** Không thay đổi mã nguồn HTML.
-
----
-
-## 2. Bảng tổng hợp các lỗi phát hiện và giải pháp khắc phục
+## Bảng tổng hợp các lỗi phát hiện và giải pháp khắc phục
 
 | STT | Thành phần giao diện | Hiện tượng lỗi ban đầu | Nguyên nhân kỹ thuật trong CSS | Giải pháp khắc phục |
 | :---: | :--- | :--- | :--- | :--- |
@@ -28,85 +12,81 @@
 
 ---
 
-## 3. Đoạn mã CSS đã sửa đổi chi tiết
+## Đoạn mã CSS đã sửa đổi chi tiết
 
-```css
-/* 1. Chuẩn hóa box model */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Đảm bảo 3 thẻ sản phẩm luôn nằm vừa vặn 1 hàng ngang */
-}
-
-/* 2. Menu sticky bám đỉnh và nổi trên ảnh */
-.site-header {
-    background: #2b2b2b;
-    position: sticky;
-    top: 0;          /* Kích hoạt dính ở đỉnh màn hình */
-    z-index: 100;    /* Luôn nổi trên hero */
-}
-
+```diff
+/* 1. Chuẩn hóa Box Model */
+ * {
+ 	margin: 0;
+ 	padding: 0;
++	box-sizing: border-box;
+ }
+/* 2. Menu dính trên đỉnh khi cuộn và nổi trên hero */
+ .site-header {
+ 	background: #2b2b2b;
+ 	position: sticky;
++	top: 0;
++	z-index: 100;
+ }
 /* 3. Hero làm mốc tọa độ và ảnh phủ kín khung */
-.hero {
-    position: relative; /* Mốc căn giữa cho overlay */
-    height: 360px;
-    overflow: hidden;
-}
-.hero-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Phủ kín không méo hình */
-}
-
-/* 4. Thẻ sản phẩm: Mốc tọa độ cho badge và co giãn linh hoạt */
-.card {
-    flex: 0 0 calc((100% - 48px) / 3);
-    min-height: 320px;  /* Thay cho height: 300px cố định */
-    position: relative; /* Mốc cho badge góc trên bên phải */
-    background: #fff;
-    border: 1px solid #e0d8c8;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-/* 5. Nhãn -20% bám góc phải thẻ */
-.badge {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: #c0392b;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 4px 10px;
-    border-radius: 20px;
-    z-index: 10;
-}
-
-/* 6. Ảnh sản phẩm nằm gọn trong thẻ */
-.card img {
-    display: block;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-/* 7. Nút back-to-top ở góc dưới bên phải */
-.back-to-top {
-    position: fixed;
-    bottom: 24px; /* Sửa từ top: 24px */
-    right: 24px;
-    width: 48px;
-    height: 48px;
-    background: #2b2b2b;
-    color: #fff;
-    text-align: center;
-    line-height: 48px;
-    font-size: 22px;
-    text-decoration: none;
-    border-radius: 50%;
-    z-index: 200;
-}
+ .hero {
++	position: relative;
+ 	height: 360px;
+ 	overflow: hidden;
+ }
+ .hero-bg {
+ 	width: 100%;
+ 	height: 100%;
++	object-fit: cover;
+ }
+/* 4. Thẻ sản phẩm: Bỏ cố định height, làm mốc cho badge */
+ .card {
+ 	flex: 0 0 calc((100% - 48px) / 3);
+-	height: 300px;
++	min-height: 320px;
++	position: relative;
+ 	background: #fff;
+ 	border: 1px solid #e0d8c8;
+ 	border-radius: 8px;
+ 	padding: 16px;
+ 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+ }
+/* 5. Nhãn -20% nổi trên ảnh */
+ .badge {
+ 	position: absolute;
+ 	top: 12px;
+ 	right: 12px;
+ 	background: #c0392b;
+ 	color: #fff;
+ 	font-size: 14px;
+ 	font-weight: bold;
+ 	padding: 4px 10px;
+ 	border-radius: 20px;
++	z-index: 10;
+ }
+/* 6. Ảnh nằm gọn vừa vặn trong thẻ */
+ .card img {
+ 	display: block;
++	width: 100%;
++	height: 180px;
++	object-fit: cover;
++	border-radius: 4px;
+ }
+/* 7. Nút back-to-top ở góc dưới bên phải màn hình */
+ .back-to-top {
+ 	position: fixed;
+-	top: 24px;
++	bottom: 24px;
+ 	right: 24px;
+ 	width: 48px;
+ 	height: 48px;
+ 	background: #2b2b2b;
+ 	color: #fff;
+ 	text-align: center;
+ 	line-height: 48px;
+ 	font-size: 22px;
+ 	text-decoration: none;
+ 	border-radius: 50%;
++	z-index: 200;
+ }
 ```

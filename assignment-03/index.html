@@ -1,335 +1,180 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 3 - CSS: Sửa Lỗi Box Model & Positioning | IT4409</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>Assignment 03 - Dunght</title>
     <style>
-        :root {
-            --bg: #0f172a;
-            --surface: #1e293b;
-            --surface-hover: #334155;
-            --border: #334155;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-glow: rgba(56, 189, 248, 0.15);
-            --success: #10b981;
-            --danger: #ef4444;
-            --warning: #f59e0b;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
-            padding: 32px 20px 80px;
-        }
-
-        .container {
-            max-width: 1100px;
+            font-family: 'CaskaydiaCove Nerd Font Mono', monospace;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 30px 20px;
+            max-width: 900px;
             margin: 0 auto;
+            line-height: 1.6;
         }
 
-        /* Top Nav */
-        .top-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 24px;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 36px;
-        }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            padding: 8px 16px;
-            border-radius: 8px;
-            background: rgba(56, 189, 248, 0.08);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            transition: all 0.2s ease;
-        }
-        .back-link:hover {
-            background: rgba(56, 189, 248, 0.15);
-            transform: translateX(-2px);
-        }
-        .course-badge {
-            background: rgba(248, 250, 252, 0.06);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            color: var(--text-muted);
-            border: 1px solid var(--border);
-        }
-
-        /* Header */
-        .header {
-            margin-bottom: 40px;
-        }
-        .header h1 {
-            font-size: 32px;
-            font-weight: 800;
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .header p {
-            color: var(--text-muted);
-            font-size: 16px;
-            max-width: 800px;
-        }
-
-        /* Criteria Checklist */
-        .criteria-box {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 40px;
-        }
-        .criteria-box h3 {
-            font-size: 16px;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .criteria-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 16px;
-        }
-        .criteria-item {
-            background: rgba(15, 23, 42, 0.6);
-            padding: 14px 16px;
-            border-radius: 10px;
-            border-left: 3px solid var(--success);
-            font-size: 14px;
-        }
-        .criteria-item strong {
-            display: block;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-
-        /* Activity Cards */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 28px;
-            margin-bottom: 48px;
-        }
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-        }
-        .card-tag {
-            display: inline-block;
-            align-self: flex-start;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-        .card-tag.manual {
-            background: rgba(16, 185, 129, 0.15);
-            color: var(--success);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
-        .card-tag.ai {
-            background: rgba(56, 189, 248, 0.15);
-            color: var(--accent);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-        }
-        .card h2 {
-            font-size: 22px;
-            margin-bottom: 12px;
-            color: #fff;
-        }
-        .card p {
-            color: var(--text-muted);
-            font-size: 14px;
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 16px;
             margin-bottom: 24px;
-            flex-grow: 1;
-        }
-        .card-features {
-            list-style: none;
-            margin-bottom: 28px;
-            font-size: 13px;
-            color: #cbd5e1;
-        }
-        .card-features li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .card-features li::before {
-            content: "✓";
-            color: var(--success);
-            font-weight: bold;
-        }
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .btn-primary {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: var(--accent);
-            color: #0f172a;
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        .btn-primary:hover {
-            background: #7dd3fc;
-            box-shadow: 0 4px 16px var(--accent-glow);
-        }
-        .btn-secondary {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: rgba(248, 250, 252, 0.05);
-            color: var(--text-main);
-            padding: 10px 16px;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 13px;
-            text-decoration: none;
-            border: 1px solid var(--border);
-            transition: all 0.2s ease;
-        }
-        .btn-secondary:hover {
-            background: var(--surface-hover);
-            border-color: #64748b;
         }
 
-        /* Footer */
-        .footer {
+        .back-link {
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .info {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        .info span {
+            margin-right: 18px;
+        }
+
+        .tree-container {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 24px 28px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .tree-title {
+            font-weight: 700;
+            font-size: 17px;
+            color: #0f172a;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        ul.tree {
+            list-style: none;
+            padding-left: 20px;
+            font-family: 'CaskaydiaCove Nerd Font Mono', "Consolas", "Monaco", "Courier New", monospace;
+            font-size: 14px;
+        }
+
+        ul.tree ul {
+            list-style: none;
+            padding-left: 26px;
+            border-left: 1px dashed #94a3b8;
+            margin: 4px 0 8px 10px;
+        }
+
+        ul.tree li {
+            margin: 6px 0;
+            position: relative;
+        }
+
+        ul.tree li::before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: -16px;
+            width: 12px;
+            height: 1px;
+            border-top: 1px dashed #94a3b8;
+        }
+
+        ul.tree>li::before {
+            display: none;
+        }
+
+        .folder {
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1d4ed8;
+        }
+
+        footer {
+            margin-top: 30px;
             text-align: center;
-            color: #64748b;
             font-size: 13px;
-            padding-top: 32px;
-            border-top: 1px solid var(--border);
+            color: #94a3b8;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Top Navigation -->
-        <div class="top-nav">
-            <a href="../" class="back-link">← Về Cổng thông tin môn học (Portal)</a>
-            <div class="course-badge">Học phần: IT4409 — Lập trình Web</div>
+
+    <header>
+        <a href="../index.html" class="back-link">← Về trang chủ</a>
+        <h1>Assignment 03 - CSS (Box Model & Positioning)</h1>
+        <div class="info">
+            <span><strong>Hà Tuấn Dũng - 20235299</strong></span>
+            <span><strong>GitHub:</strong> <a href="https://github.com/Dngk1105/WEB-Asignment/tree/main/assignment-03"
+                    target="_blank">Dngk1105/WEB-Asignment/assignment-03</a></span>
         </div>
+    </header>
 
-        <!-- Header -->
-        <header class="header">
-            <h1>Assignment 3: CSS — Chẩn đoán & Sửa lỗi Bố cục</h1>
-            <p>Trang khuyến mãi Tết 2026 của xưởng in Blakletterpress đã được lập trình viên dựng sẵn HTML semantic, nhiệm vụ là tìm & sửa toàn diện các lỗi CSS về Box Model & Positioning mà không thay đổi HTML.</p>
-        </header>
+    <div class="tree-container">
+        <div class="tree-title">Cấu trúc trang</div>
 
-        <!-- Requirements Summary -->
-        <section class="criteria-box">
-            <h3>Yêu cầu kỹ thuật cần đạt (04 tiêu chuẩn):</h3>
-            <div class="criteria-list">
-                <div class="criteria-item">
-                    <strong>1. Sticky Menu</strong>
-                    Menu dính trên đỉnh khi cuộn trang và luôn nổi trên ảnh hero.
-                </div>
-                <div class="criteria-item">
-                    <strong>2. Hero Overlay</strong>
-                    Ảnh hero phủ kín khung không méo; tiêu đề căn chính giữa ảnh.
-                </div>
-                <div class="criteria-item">
-                    <strong>3. Sản phẩm 1 Hàng</strong>
-                    3 thẻ xếp ngang, nhãn "-20%" ở góc trên bên phải của chính thẻ.
-                </div>
-                <div class="criteria-item">
-                    <strong>4. Nút Back-to-Top</strong>
-                    Nút "↑" nổi cố định ở góc dưới bên phải màn hình khi cuộn.
-                </div>
-            </div>
-        </section>
+        <ul class="tree" style="padding-left: 0;">
+            <li>
+                <span class="folder">assignment-03/</span>
+                <ul>
+                    <!-- BÀI TẬP 1 -->
+                    <li>
+                        <span class="folder"><a href="./bai-tap-1/index.html">bai-tap-1/</a></span>
+                        <ul>
+                            <li><a href="./bai-tap-1/index.html">index.html</a></li>
+                            <li><a href="./bai-tap-1/style_new.css">style_new.css</a></li>
+                            <li><a href="./bai-tap-1/style_old.css">style_old.css</a></li>
+                            <li><a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-03/bai-tap-1/phan-tich-loi.md"
+                                    target="_blank">phan-tich-loi.md</a></li>
+                        </ul>
+                    </li>
 
-        <!-- 2 Activities Grid -->
-        <main class="cards-grid">
-            <!-- Bài tập 1 -->
-            <article class="card">
-                <span class="card-tag manual">Bài tập 1 — Tự thực hiện</span>
-                <h2>Sửa lỗi CSS Thủ Công (Không AI)</h2>
-                <p>Tự phân tích mã nguồn, phát hiện 7 lỗi kỹ thuật từ box-sizing, mốc tọa độ relative, overflow tràn chữ, đến vị trí sticky và back-to-top.</p>
-                <ul class="card-features">
-                    <li>Đã sửa xong toàn bộ lỗi trong <code>style_new.css</code></li>
-                    <li>Giữ nguyên 100% cấu trúc file HTML</li>
-                    <li>Có bản gốc <code>style_old.css</code> để so sánh</li>
-                    <li>Báo cáo chẩn đoán chi tiết từng nguyên nhân lỗi</li>
+                    <!-- BÀI TẬP 2 -->
+                    <li style="margin-top: 14px;">
+                        <span class="folder"><a href="./bai-tap-2/index.html">bai-tap-2/</a></span>
+                        <ul>
+                            <li><a href="./bai-tap-2/index.html">index.html</a></li>
+                            <li><a href="./bai-tap-2/style.css">style.css</a></li>
+                            <li><a href="./bai-tap-2/style-loi-goc.css">style-loi-goc.css</a></li>
+                            <li><a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-03/bai-tap-2/prompt-ai.md"
+                                    target="_blank">prompt-ai.md</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- README -->
+                    <li style="margin-top: 14px;">
+                        <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-03/README.md"
+                            target="_blank">README.md</a>
+                    </li>
                 </ul>
-                <div class="btn-group">
-                    <a href="./bai-tap-1/index.html" class="btn-primary" target="_blank">Xem Bài tập 1 (Đã sửa lỗi) ↗</a>
-                    <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-03/bai-tap-1/phan-tich-loi.md" class="btn-secondary" target="_blank">📄 Báo cáo phân tích kỹ thuật</a>
-                </div>
-            </article>
-
-            <!-- Bài tập 2 -->
-            <article class="card">
-                <span class="card-tag ai">Bài tập 2 — Prompt GenAI</span>
-                <h2>Sửa lỗi Bằng Prompt GenAI</h2>
-                <p>Thiết kế bộ Prompt chuyên gia xử lý 3 bẫy tinh vi: <code>overflow-x: clip</code> cứu sticky, bẫy ghi đè <code>box-sizing</code>, bẫy <code>z-index</code> Stacking Context và bảo vệ code đúng.</p>
-                <ul class="card-features">
-                    <li>Đã sửa xong và bảo vệ các đoạn code đúng</li>
-                    <li>Bộ Prompt Senior Front-end chi tiết kèm theo</li>
-                    <li>Giải thích cơ chế Stacking Context & Scroll container</li>
-                    <li>Sẵn sàng mã nguồn đối chứng</li>
-                </ul>
-                <div class="btn-group">
-                    <a href="./bai-tap-2/index.html" class="btn-primary" target="_blank">Xem Bài tập 2 (Đã sửa lỗi) ↗</a>
-                    <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-03/bai-tap-2/prompt-ai.md" class="btn-secondary" target="_blank">🤖 Báo cáo & Bộ Prompt GenAI</a>
-                </div>
-            </article>
-        </main>
-
-        <footer class="footer">
-            <p>Sinh viên: Hà Tuấn Dũng | MSSV & Repo: <a href="https://github.com/Dngk1105/WEB-Asignment" target="_blank" style="color:var(--accent); text-decoration:none;">Dngk1105/WEB-Asignment</a></p>
-        </footer>
+            </li>
+        </ul>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Hà Tuấn Dũng — Học phần IT4409 (Lập trình Web) | HUST</p>
+    </footer>
+
 </body>
+
 </html>
