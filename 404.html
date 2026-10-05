@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Không tìm thấy trang | IT4409 Hà Tuấn Dũng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b0f19;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px;
+            text-align: center;
+        }
+        .error-card {
+            background: #1e293b;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 48px 36px;
+            max-width: 520px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .error-code {
+            font-size: 72px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        h1 { font-size: 22px; margin-bottom: 12px; }
+        p { color: #94a3b8; font-size: 15px; margin-bottom: 28px; line-height: 1.6; }
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn-portal {
+            background: #38bdf8;
+            color: #0b0f19;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-portal:hover { background: #7dd3fc; }
+        .sub-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 8px;
+        }
+        .sub-btn {
+            color: #94a3b8;
+            font-size: 13px;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s ease;
+        }
+        .sub-btn:hover { color: #fff; border-color: #38bdf8; }
+    </style>
+</head>
+<body>
+    <div class="error-card">
+        <div class="error-code">404</div>
+        <h1>Không tìm thấy đường dẫn</h1>
+        <p>Đường dẫn bạn yêu cầu không tồn tại hoặc đã được tái cấu trúc sang danh mục bài tập mới của môn học.</p>
+        <div class="links-group">
+            <a href="/" class="btn-portal">← Quay về Cổng thông tin môn học (Portal Hub)</a>
+            <div class="sub-actions">
+                <a href="/assignment-02/index.html" class="sub-btn">Mở Assignment 2</a>
+                <a href="/assignment-03/index.html" class="sub-btn">Mở Assignment 3</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

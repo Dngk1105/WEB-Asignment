@@ -1,210 +1,25 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Truyền thông đa phương tiện - Ngày hội Công nghệ Xanh 2026 tại Blakletterpress. Theo dõi video phóng sự, podcast đối thoại và hình ảnh tư liệu độc quyền.">
-	<meta name="keywords" content="công nghệ xanh, sự kiện, video, podcast, bản đồ, media, Blakletterpress">
-	<meta name="robots" content="index, follow">
-	<meta property="og:title" content="Ngày hội Công nghệ Xanh 2026 - Truyền thông Đa phương tiện">
-	<meta property="og:description" content="Theo dõi phóng sự video và podcast đối thoại độc quyền về sự kiện Công nghệ Xanh 2026.">
-	<meta property="og:image" content="http://dngk2408.id.vn/images/meeting.jpg">
-	<meta property="og:url" content="http://dngk2408.id.vn/media.html">
-	<meta property="og:type" content="article">
-	<link rel="canonical" href="http://dngk2408.id.vn/media.html">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-	<title>Truyền thông sự kiện - Blakletterpress</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=./assignment-02/media.html">
+    <title>Chuyển hướng - Assignment 2: Trang Media</title>
+    <script>
+        window.location.replace("./assignment-02/media.html" + window.location.search + window.location.hash);
+    </script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #faf9f6; color: #333; text-align: center; }
+        .box { background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); max-width: 480px; }
+        a { color: #8c2d19; font-weight: 600; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
-	<div id="page">
-		<!-- HEADER CHÍNH -->
-		<header id="header">
-			<div id="motto">
-				<a href="index.html" class="sitename"><img src="images/blakletterpress.png" height="24" width="142" alt="Blakletterpress"></a>
-				<p>
-					<img src="images/header-text.png" height="14" width="218" alt="Your online source of trusted news">
-				</p>
-			</div>
-			<div id="logo">
-				<a href="index.html"><img src="images/logo.png" alt="Logo BLP Blakletterpress"></a>
-			</div>
-			<search id="searchbar">
-				<form action="news.html" method="get" role="search">
-					<input type="text" name="q" value="Enter search query" class="txtfield" onblur="if(this.value==''){this.value=this.defaultValue;}" onfocus="if(this.value==this.defaultValue){this.value='';}" aria-label="Tìm kiếm tin tức">
-					<input type="submit" value="Search" class="btn">
-				</form>
-			</search>
-		</header>
-
-		<!-- THÂN TRANG GỒM NỘI DUNG CHÍNH & SIDEBAR -->
-		<div id="contents">
-			<!-- NỘI DUNG CHÍNH (MAIN) -->
-			<main id="main">
-				<div class="body">
-					<article class="media-article">
-						<header class="media-header">
-							<h1 class="media-title">Ngày Hội Công Nghệ Xanh 2026</h1>
-							<p class="media-meta">
-								<time datetime="2026-04-22">22/04/2026</time> &middot; Ban biên tập: <a href="about.html">Tòa soạn Blakletterpress</a> &middot; Chuyên mục: <a href="news.html">Truyền thông Đa phương tiện</a>
-							</p>
-						</header>
-
-						<!-- HÌNH ẢNH MINH HỌA CHÍNH -->
-						<figure class="media-figure">
-							<img src="images/meeting.jpg" alt="Toàn cảnh phiên khai mạc hội thảo công nghệ xanh" width="560">
-							<figcaption>Toàn cảnh phiên khai mạc hội thảo công nghệ xanh với sự tham gia của hơn 300 đại biểu và chuyên gia.</figcaption>
-						</figure>
-
-						<!-- GIỚI THIỆU SỰ KIỆN -->
-						<section aria-labelledby="intro-heading">
-							<h2 id="intro-heading" class="media-heading">Giới Thiệu Sự Kiện</h2>
-							<p class="media-desc">
-								Ngày hội Công nghệ Xanh 2026 là diễn đàn thường niên quy tụ các chuyên gia kinh tế, nhà khoa học và doanh nghiệp khởi nghiệp tiên phong trong các giải pháp kinh tế tuần hoàn, vật liệu sinh thái và năng lượng tái tạo. Sự kiện mở ra không gian thảo luận đa chiều nhằm thúc đẩy các chính sách xanh hóa doanh nghiệp tại Việt Nam.
-							</p>
-						</section>
-
-						<!-- VIDEO GIỚI THIỆU -->
-						<section aria-labelledby="video-heading">
-							<h2 id="video-heading" class="media-heading">Video Phóng Sự Đặc Biệt</h2>
-							<figure class="media-player-wrapper">
-								<video controls poster="images/team-large.jpg" width="560">
-									<source src="media/green_tech_intro.mp4" type="video/mp4">
-									Trình duyệt của bạn không hỗ trợ phát thẻ video HTML5.
-								</video>
-								<figcaption>Phóng sự ngắn: Khám phá các sáng kiến giảm phát thải carbon nổi bật trong năm 2026.</figcaption>
-							</figure>
-						</section>
-
-						<!-- PODCAST: TRÒ CHUYỆN CÙNG DIỄN GIẢ -->
-						<section aria-labelledby="podcast-heading">
-							<h2 id="podcast-heading" class="media-heading">Podcast: Trò Chuyện Cùng Diễn Giả</h2>
-							<p class="media-desc center-text">Lắng nghe buổi phỏng vấn trực tiếp cùng diễn giả chính về xu hướng công nghệ tuần hoàn:</p>
-							<figure class="media-player-wrapper">
-								<audio controls>
-									<source src="media/podcast_green_tech.mp3" type="audio/mpeg">
-									Trình duyệt của bạn không hỗ trợ phát thẻ audio HTML5.
-								</audio>
-								<figcaption>Tọa đàm âm thanh: Cơ hội bứt phá của doanh nghiệp xanh trong thập kỷ mới.</figcaption>
-							</figure>
-						</section>
-
-						<!-- ĐỊA ĐIỂM TỔ CHỨC -->
-						<section aria-labelledby="location-heading">
-							<h2 id="location-heading" class="media-heading">Địa Điểm Tổ Chức</h2>
-							<p class="media-desc center-text">Sự kiện diễn ra tại Trung tâm Hội nghị Quốc tế Hà Nội. Xem sơ đồ hướng dẫn chỉ đường bên dưới:</p>
-							<figure class="map-wrapper">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119175.27506979685!2d105.74828113400585!3d21.022736015509744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd8161a63%3A0x871425078231e62e!2zSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" width="560" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ địa điểm tổ chức sự kiện tại Hà Nội"></iframe>
-								<figcaption>Bản đồ trực tuyến dẫn đường tới địa điểm tổ chức sự kiện tại Hà Nội.</figcaption>
-							</figure>
-						</section>
-
-						<!-- HÌNH ẢNH CÁC MÙA TRƯỚC -->
-						<section aria-labelledby="history-heading">
-							<h2 id="history-heading" class="media-heading">Khu Trưng Bày Sáng Kiến Sinh Thái</h2>
-							<figure class="media-figure">
-								<img src="images/ecofriends.jpg" alt="Khu trưng bày sản phẩm xanh 2025" width="560">
-								<figcaption>Gian hàng trưng bày các vật liệu sinh thái thân thiện với môi trường tự nhiên.</figcaption>
-							</figure>
-						</section>
-
-						<!-- TAGS VÀ CHỦ ĐỀ LIÊN QUAN -->
-						<footer class="media-tags">
-							<p>Chủ đề liên quan: <a href="news.html">công nghệ xanh</a>, <a href="news.html">phát triển bền vững</a>, <a href="blog.html">kinh tế tuần hoàn</a>.</p>
-						</footer>
-					</article>
-				</div>
-			</main>
-
-			<!-- CỘT BÊN (SIDEBAR) -->
-			<aside id="sidebar" aria-label="Thanh điều hướng và thông tin phụ">
-				<nav id="navigation" aria-label="Menu chính">
-					<div>
-						<ul>
-							<li>
-								<a href="index.html">Home</a>
-							</li>
-							<li>
-								<a href="about.html">About</a>
-							</li>
-							<li>
-								<a href="news.html">News</a>
-							</li>
-							<li>
-								<a href="blog.html">Blog</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-				<section class="section" aria-labelledby="connect-heading">
-					<div id="connect">
-						<h2 id="connect-heading">Connect with us:</h2>
-						<a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" rel="noopener noreferrer" class="twitter" aria-label="Twitter Blakletterpress"></a>
-						<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" rel="noopener noreferrer" class="facebook" aria-label="Facebook Blakletterpress"></a>
-						<a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" rel="noopener noreferrer" class="googleplus" aria-label="Google Plus Blakletterpress"></a>
-					</div>
-				</section>
-				<section class="section" aria-labelledby="posts-heading">
-					<div id="posts">
-						<h2 id="posts-heading">Sự Kiện Khác</h2>
-						<ul>
-							<li>
-								<h5><a href="register.html" style="color:inherit; text-decoration:none;">Đăng ký tham dự Ngày hội 2026</a></h5>
-								<p>
-									Nhận vé mời điện tử miễn phí và tài liệu hội thảo gửi thẳng vào email.
-								</p>
-								<a href="register.html" class="more">Đăng ký ngay</a>
-							</li>
-							<li>
-								<h5><a href="news.html" style="color:inherit; text-decoration:none;">Bản tin tổng hợp tuần qua</a></h5>
-								<p>
-									Điểm lại 5 diễn biến đáng chú ý nhất về môi trường và công nghệ sạch.
-								</p>
-								<a href="news.html" class="more">Xem chi tiết</a>
-							</li>
-						</ul>
-						<a href="news.html" class="btn2">View More</a>
-					</div>
-				</section>
-			</aside>
-		</div>
-
-		<!-- CHÂN TRANG (FOOTER) -->
-		<footer id="footer">
-			<div>
-				<ul id="featured">
-					<li>
-						<a href="index.html" class="home" aria-label="Trang chủ"></a>
-						<p>
-							Trang chủ cung cấp cái nhìn tổng quan về các hoạt động xuất bản, tiêu điểm trong ngày và tiêu chí biên tập hàng đầu của tòa soạn.
-						</p>
-					</li>
-					<li>
-						<a href="news.html" class="bell" aria-label="Thông báo tin tức"></a>
-						<p>
-							Dòng tin thời sự, bản tin đặc biệt và các cập nhật mới nhất được phân loại khoa học theo từng chuyên đề được độc giả quan tâm.
-						</p>
-					</li>
-					<li>
-						<a href="media.html" class="globe" aria-label="Trang truyền thông sự kiện"></a>
-						<p>
-							Khám phá nội dung đa phương tiện sinh động với video sự kiện chất lượng cao, podcast thảo luận và tư liệu hình ảnh độc quyền.
-						</p>
-					</li>
-					<li>
-						<a href="register.html" class="pencil" aria-label="Đăng ký nhận thông tin"></a>
-						<p>
-							Đăng ký nhận bản tin định kỳ miễn phí vào hộp thư điện tử của bạn để không bỏ lỡ các phân tích chuyên sâu và sự kiện hấp dẫn.
-						</p>
-					</li>
-				</ul>
-				<small id="footnote">
-					&copy; Copyright &copy; 2026 Blakletterpress. Mọi quyền được bảo lưu.
-				</small>
-			</div>
-		</footer>
-	</div>
+    <div class="box">
+        <h2>Đang chuyển hướng đến Bài tập...</h2>
+        <p>Trang <strong>media.html</strong> đã được chuyển vào <strong>Assignment 2</strong>.</p>
+        <p><a href="./assignment-02/media.html">Bấm vào đây nếu trình duyệt không tự chuyển hướng</a></p>
+    </div>
 </body>
 </html>
