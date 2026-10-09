@@ -44,13 +44,23 @@ WEB-Asignment/
 │   │   ├── images/                 # Ảnh sản phẩm và hero
 │   │   └── phan-tich-loi.md        # Báo cáo phân tích kỹ thuật
 │   │
-│   └── bai-tap-2/                  # Bài tập 2: Sửa lỗi dùng Prompt GenAI
-│       ├── index.html              # Trang web chạy với CSS đã sửa
-│       ├── trang.html              # File HTML gốc
-│       ├── style.css               # CSS đã sửa theo kết quả GenAI
-│       ├── style-loi-goc.css       # CSS gốc bị lỗi để đối chứng
-│       ├── images/                 # Ảnh sản phẩm và hero
-│       └── prompt-ai.md            # Bộ Prompt chuyên gia & báo cáo giải trình
+│   ├── bai-tap-2/                  # Bài tập 2: Sửa lỗi dùng Prompt GenAI
+│   │   ├── index.html              # Trang web chạy với CSS đã sửa
+│   │   ├── trang.html              # File HTML gốc
+│   │   ├── style.css               # CSS đã sửa theo kết quả GenAI
+│   │   ├── style-loi-goc.css       # CSS gốc bị lỗi để đối chứng
+│   │   ├── images/                 # Ảnh sản phẩm và hero
+│   │   └── prompt-ai.md            # Bộ Prompt chuyên gia & báo cáo giải trình
+│   │
+│   ├── bai-tap-3/                  # Bài tập 3: Responsive Web Design Demo
+│   │   ├── index.html              # Trang demo điều hướng
+│   │   └── responsive-Bai tap 3.html # Demo Flexbox 3 cột / 2 cột / 1 cột
+│   │
+│   └── bai-tap-4/                  # Bài tập 4: CSS Responsive (IDE Dark Theme)
+│       ├── index.html              # Trang web giao diện theme IDE
+│       ├── trang-goc.html          # HTML gốc không sửa đổi
+│       ├── style.css               # CSS chuẩn theme IDE Dark
+│       └── images/                 # Ảnh tài nguyên
 │
 └── README.md
 ```
@@ -66,13 +76,18 @@ WEB-Asignment/
   - Trang Media (Video/Audio): [https://dngk2408.id.vn/assignment-02/media.html](https://dngk2408.id.vn/assignment-02/media.html)
   - Bản nâng cấp Semantic: [https://dngk2408.id.vn/assignment-02/index_new.html](https://dngk2408.id.vn/assignment-02/index_new.html)
 
-### 2. [Assignment 3: CSS — Chẩn đoán & Sửa lỗi Bố cục](./assignment-03/)
+### 2. [Assignment 3: CSS — Chẩn đoán, Sửa lỗi Bố cục & Responsive Design](./assignment-03/)
 - **Trực tiếp Hub:** [https://dngk2408.id.vn/assignment-03/](https://dngk2408.id.vn/assignment-03/)
 - **Bài tập 1 (Tự sửa lỗi):** [https://dngk2408.id.vn/assignment-03/bai-tap-1/](https://dngk2408.id.vn/assignment-03/bai-tap-1/)
   - [Trang demo web (trang.html)](https://dngk2408.id.vn/assignment-03/bai-tap-1/trang.html)
   - [Báo cáo phân tích chi tiết & Diff CSS](./assignment-03/bai-tap-1/phan-tich-loi.md)
 - **Bài tập 2 (Prompt GenAI):** [https://dngk2408.id.vn/assignment-03/bai-tap-2/](https://dngk2408.id.vn/assignment-03/bai-tap-2/)
   - [Bộ Prompt chuyên gia & Báo cáo kỹ thuật](./assignment-03/bai-tap-2/prompt-ai.md)
+- **Bài tập 3 (Responsive Demo):** [https://dngk2408.id.vn/assignment-03/bai-tap-3/](https://dngk2408.id.vn/assignment-03/bai-tap-3/)
+  - [responsive-Bai tap 3.html](https://dngk2408.id.vn/assignment-03/bai-tap-3/responsive-Bai%20tap%203.html)
+- **Bài tập 4 (CSS Blakletterpress - IDE Dark Theme):** [https://dngk2408.id.vn/assignment-03/bai-tap-4/](https://dngk2408.id.vn/assignment-03/bai-tap-4/)
+  - [trang-goc.html](https://dngk2408.id.vn/assignment-03/bai-tap-4/trang-goc.html)
+  - [style.css](./assignment-03/bai-tap-4/style.css)
 
 ---
 
