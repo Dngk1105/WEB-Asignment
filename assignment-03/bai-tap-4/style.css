@@ -1,60 +1,10 @@
 /* ==========================================================================
-   Blakletterpress — Modern IDE Dark Theme (Antigravity / VS Code Inspired)
+   Blakletterpress — Clean Developer Monospace Theme (Đồng bộ với hệ thống Index)
    Assignment 03 - Bai tap 4 | Ha Tuan Dung - 20235299
    ========================================================================== */
 
-/* 1. Google Fonts: JetBrains Mono / Fira Code & Inter */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-/* 2. IDE Design System & CSS Custom Properties */
-:root {
-	/* Backgrounds (Dark IDE Palette) */
-	--ide-bg-canvas: #0d1117;          /* Root canvas (GitHub/VS Code deep dark) */
-	--ide-bg-sidebar: #131722;         /* Explorer / Sidebar dark */
-	--ide-bg-panel: #161b26;           /* Main editor panels / cards */
-	--ide-bg-card: #1c2130;            /* Elevated card surface */
-	--ide-bg-hover: #262c3e;           /* Hover / Active state */
-	--ide-bg-input: #0f131d;           /* Terminal / Input fields */
-	--ide-bg-header: #10141e;          /* Titlebar / Activity bar */
-	--ide-bg-statusbar: #0a0d14;       /* Status bar at bottom */
-
-	/* Borders & Separators */
-	--ide-border: #252b3d;             /* Subtle panel borders */
-	--ide-border-hover: #38425d;       /* Border on focus/hover */
-	--ide-border-glow: rgba(56, 189, 248, 0.4);
-
-	/* Syntax & Accent Colors */
-	--ide-cyan: #38bdf8;               /* Methods, properties, primary brand */
-	--ide-purple: #c084fc;             /* Keywords, decorators */
-	--ide-green: #34d399;              /* Strings, status online */
-	--ide-amber: #fbbf24;              /* Warnings, constants, tags */
-	--ide-rose: #f43f5e;               /* Errors, operators, badges */
-	--ide-blue: #60a5fa;               /* Links, primary accents */
-
-	/* Typography Colors */
-	--ide-text-bright: #f8fafc;        /* Headings & key text */
-	--ide-text-primary: #e2e8f0;       /* Body content */
-	--ide-text-muted: #94a3b8;         /* Comments, descriptions */
-	--ide-text-faint: #64748b;         /* Line numbers, meta info */
-
-	/* Fonts */
-	--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-	--font-mono: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, monospace;
-
-	/* Layout & Spacing */
-	--max-width: 1240px;
-	--radius-sm: 6px;
-	--radius-md: 10px;
-	--radius-lg: 16px;
-	--transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-	--shadow-panel: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--ide-border);
-	--shadow-glow: 0 0 25px rgba(56, 189, 248, 0.15);
-}
-
-/* 3. Global Reset & Box Model */
-*,
-*::before,
-*::after {
+/* 1. Global Reset & Box Model */
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -62,53 +12,34 @@
 
 html {
 	scroll-behavior: smooth;
-	background-color: var(--ide-bg-canvas);
-	color: var(--ide-text-primary);
-	font-family: var(--font-sans);
+	background-color: #f8fafc;
+	color: #1e293b;
 	font-size: 15px;
-	line-height: 1.65;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.6;
 }
 
 body {
+	font-family: 'CaskaydiaCove Nerd Font Mono', 'Cascadia Code', Consolas, Monaco, 'Courier New', monospace;
+	background-color: #f8fafc;
+	color: #1e293b;
+	padding: 30px 20px;
+	max-width: 1000px;
+	margin: 0 auto;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	background: radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.05), transparent 40%),
-	            radial-gradient(circle at 85% 60%, rgba(192, 132, 252, 0.04), transparent 45%),
-	            var(--ide-bg-canvas);
-	background-attachment: fixed;
-	color: var(--ide-text-primary);
-	overflow-x: hidden;
 }
 
-/* Custom Scrollbar (IDE Dark) */
-::-webkit-scrollbar {
-	width: 10px;
-	height: 10px;
-}
-::-webkit-scrollbar-track {
-	background: var(--ide-bg-canvas);
-}
-::-webkit-scrollbar-thumb {
-	background: #252c3e;
-	border-radius: 5px;
-	border: 2px solid var(--ide-bg-canvas);
-}
-::-webkit-scrollbar-thumb:hover {
-	background: #3b4461;
-}
-
-/* Base Link Styling */
+/* Base Links */
 a {
-	color: var(--ide-cyan);
+	color: #2563eb;
 	text-decoration: none;
-	transition: var(--transition);
+	transition: color 0.15s ease;
 }
+
 a:hover {
-	color: #7dd3fc;
 	text-decoration: underline;
+	color: #1d4ed8;
 }
 
 img {
@@ -117,149 +48,76 @@ img {
 }
 
 /* ==========================================================================
-   4. Header & Navigation (IDE Window Bar & Editor Tabs)
+   2. Header & Navigation (Đồng bộ header của index.html)
    ========================================================================== */
 .site-header {
-	background-color: var(--ide-bg-header);
-	border-bottom: 1px solid var(--ide-border);
-	position: sticky;
-	top: 0;
-	z-index: 1000;
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px);
-	padding: 12px 24px;
+	border-bottom: 2px solid #e2e8f0;
+	padding-bottom: 16px;
+	margin-bottom: 24px;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	gap: 16px;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+	gap: 12px 20px;
 }
 
-/* Window Control Buttons (Red, Yellow, Green IDE dots) */
-.site-header::before {
-	content: "";
-	display: inline-block;
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	background-color: #ff5f56;
-	box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
-	margin-right: 50px;
-}
-
-/* Site Brand (Project / Workspace Title) */
 .site-name {
-	font-family: var(--font-mono);
+	font-size: 24px;
 	font-weight: 700;
-	font-size: 1.25rem;
-	letter-spacing: -0.5px;
-	color: var(--ide-text-bright);
+	color: #0f172a;
+	text-decoration: none;
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
-	text-decoration: none;
-	padding: 4px 8px;
-	border-radius: var(--radius-sm);
-	transition: var(--transition);
-}
-
-.site-name::before {
-	content: "✦";
-	color: var(--ide-cyan);
-	font-size: 1.1rem;
-	animation: pulseGlow 2.5s infinite ease-in-out;
-}
-
-@keyframes pulseGlow {
-	0%, 100% { opacity: 0.8; transform: scale(1); filter: drop-shadow(0 0 2px var(--ide-cyan)); }
-	50% { opacity: 1; transform: scale(1.15); filter: drop-shadow(0 0 8px var(--ide-cyan)); }
 }
 
 .site-name:hover {
-	color: var(--ide-cyan);
-	background: rgba(56, 189, 248, 0.1);
 	text-decoration: none;
+	color: #1e40af;
 }
 
-/* Tagline: Workspace metadata / branch badge */
 .tagline {
-	font-family: var(--font-mono);
-	font-size: 0.8rem;
-	color: var(--ide-green);
-	background: rgba(52, 211, 153, 0.1);
-	border: 1px solid rgba(52, 211, 153, 0.25);
-	padding: 3px 10px;
-	border-radius: 20px;
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-}
-
-.tagline::before {
-	content: "⌥";
-	font-size: 0.85rem;
-}
-
-/* Navigation Tabs (IDE Tab Bar Aesthetic) */
-.main-nav {
-	margin-left: auto;
+	font-size: 14px;
+	color: #475569;
+	margin-right: auto;
+	padding-left: 8px;
+	border-left: 2px solid #cbd5e1;
+	line-height: 1.4;
 }
 
 .main-nav ul {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 6px;
-	background: rgba(13, 17, 23, 0.7);
-	padding: 4px;
-	border-radius: var(--radius-md);
-	border: 1px solid var(--ide-border);
+	gap: 10px 18px;
+	padding: 0;
+	margin: 0;
 }
 
 .main-nav li a {
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-	font-family: var(--font-mono);
-	font-size: 0.85rem;
-	font-weight: 500;
-	color: var(--ide-text-muted);
-	padding: 6px 14px;
-	border-radius: var(--radius-sm);
-	transition: var(--transition);
-	position: relative;
-}
-
-.main-nav li a::before {
-	content: "#";
-	color: var(--ide-purple);
-	opacity: 0.6;
+	font-size: 14px;
+	font-weight: 600;
+	color: #2563eb;
+	padding: 4px 8px;
+	border-radius: 4px;
+	background: #eff6ff;
+	border: 1px solid #dbeafe;
+	transition: all 0.15s ease;
 }
 
 .main-nav li a:hover {
-	color: var(--ide-text-bright);
-	background-color: var(--ide-bg-hover);
+	background: #dbeafe;
+	color: #1d4ed8;
 	text-decoration: none;
 }
 
-.main-nav li a:active,
-.main-nav li a:focus {
-	color: var(--ide-cyan);
-	background-color: rgba(56, 189, 248, 0.12);
-}
-
 /* ==========================================================================
-   5. Layout Grid (Editor Main Pane + Activity Sidebar)
+   3. Layout Grid (Bố cục 2 cột responsive)
    ========================================================================== */
 .layout {
-	max-width: var(--max-width);
-	width: 100%;
-	margin: 28px auto;
-	padding: 0 24px;
 	display: grid;
-	grid-template-columns: 1fr 340px;
-	gap: 28px;
+	grid-template-columns: 1fr 310px;
+	gap: 24px;
 	align-items: start;
 	flex: 1;
 }
@@ -267,560 +125,350 @@ img {
 main {
 	display: flex;
 	flex-direction: column;
-	gap: 32px;
-	min-width: 0; /* Prevents flex children blowout */
+	gap: 24px;
+	min-width: 0;
 }
 
-/* Common Section Panel Style (IDE Code Windows) */
+/* Container Style đồng bộ .tree-container và .box-container */
 main > article,
 main > section,
 .sidebar {
-	background: var(--ide-bg-panel);
-	border: 1px solid var(--ide-border);
-	border-radius: var(--radius-lg);
-	padding: 28px;
-	box-shadow: var(--shadow-panel);
-	position: relative;
-	transition: var(--transition);
+	background: #ffffff;
+	border: 1px solid #cbd5e1;
+	border-radius: 8px;
+	padding: 24px 28px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-main > article:hover,
-main > section:hover,
-.sidebar:hover {
-	border-color: var(--ide-border-hover);
-}
-
-/* Window Title Bar Accent for Panels */
-main > article::before,
-main > section::before,
-.sidebar::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 28px;
-	right: 28px;
-	height: 2px;
-	background: linear-gradient(90deg, transparent, var(--ide-cyan), var(--ide-purple), transparent);
-	opacity: 0.5;
-}
-
-/* ==========================================================================
-   6. Article: Về Blakletterpress (Editor Document View)
-   ========================================================================== */
-article#gioi-thieu h1 {
-	font-family: var(--font-mono);
-	font-size: 1.85rem;
-	font-weight: 700;
-	color: var(--ide-text-bright);
-	margin-bottom: 20px;
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	letter-spacing: -0.5px;
-}
-
-article#gioi-thieu h1::before {
-	content: "//";
-	color: var(--ide-amber);
-	font-weight: 400;
-	font-size: 1.6rem;
-}
-
-article#gioi-thieu figure {
-	background: var(--ide-bg-canvas);
-	border: 1px solid var(--ide-border);
-	border-radius: var(--radius-md);
-	overflow: hidden;
-	margin: 20px 0 24px;
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-	transition: var(--transition);
-}
-
-article#gioi-thieu figure:hover {
-	border-color: var(--ide-cyan);
-	box-shadow: var(--shadow-glow);
-}
-
-article#gioi-thieu figure img {
-	width: 100%;
-	height: 380px;
-	object-fit: cover;
-	transition: transform 0.4s ease;
-}
-
-article#gioi-thieu figure:hover img {
-	transform: scale(1.02);
-}
-
-article#gioi-thieu figcaption {
-	font-family: var(--font-mono);
-	font-size: 0.82rem;
-	color: var(--ide-text-muted);
-	background: var(--ide-bg-header);
-	padding: 10px 16px;
-	border-top: 1px solid var(--ide-border);
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-article#gioi-thieu figcaption::before {
-	content: "📁 [preview]";
-	color: var(--ide-purple);
-	font-weight: 600;
-}
-
-article#gioi-thieu p {
-	font-size: 1.05rem;
-	line-height: 1.75;
-	color: var(--ide-text-primary);
-	margin-bottom: 14px;
-}
-
-/* Syntax highlighted keywords in text */
-article#gioi-thieu p strong {
-	color: var(--ide-cyan);
-	font-family: var(--font-mono);
-	font-weight: 600;
-	background: rgba(56, 189, 248, 0.1);
-	border: 1px solid rgba(56, 189, 248, 0.2);
-	padding: 2px 7px;
-	border-radius: 4px;
-	font-size: 0.95em;
-	transition: var(--transition);
-}
-
-article#gioi-thieu p strong:hover {
-	background: rgba(56, 189, 248, 0.2);
-	border-color: var(--ide-cyan);
-}
-
-/* ==========================================================================
-   7. Section: Giá trị cốt lõi (IDE Feature Grid / Diagnostic Cards)
-   ========================================================================== */
+/* Tiêu đề mục */
+article#gioi-thieu h1,
 section#gia-tri h2,
 section#doi-ngu h2,
 section#lien-he h2,
 .sidebar h2 {
-	font-family: var(--font-mono);
-	font-size: 1.35rem;
+	font-size: 17px;
 	font-weight: 700;
-	color: var(--ide-text-bright);
-	margin-bottom: 22px;
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	letter-spacing: -0.3px;
-}
-
-section#gia-tri h2::before {
-	content: "⚡";
-	color: var(--ide-amber);
-}
-
-.value-list {
-	list-style: none;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 18px;
-}
-
-.value-card {
-	background: var(--ide-bg-card);
-	border: 1px solid var(--ide-border);
-	border-radius: var(--radius-md);
-	padding: 22px 20px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	transition: var(--transition);
-	position: relative;
-	overflow: hidden;
-}
-
-.value-card::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 3px;
-	background: var(--ide-cyan);
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: transform 0.3s ease;
-}
-
-.value-card:nth-child(2)::before {
-	background: var(--ide-green);
-}
-.value-card:nth-child(3)::before {
-	background: var(--ide-purple);
-}
-
-.value-card:hover {
-	transform: translateY(-4px);
-	border-color: var(--ide-border-hover);
-	background: var(--ide-bg-hover);
-	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-}
-
-.value-card:hover::before {
-	transform: scaleX(1);
-}
-
-.value-card h3 {
-	font-family: var(--font-mono);
-	font-size: 1.05rem;
-	font-weight: 600;
-	color: var(--ide-text-bright);
+	color: #0f172a;
+	margin-bottom: 16px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #cbd5e1;
 	display: flex;
 	align-items: center;
 	gap: 8px;
 }
 
-.value-card h3::before {
-	content: "const";
-	font-size: 0.75rem;
-	color: var(--ide-purple);
-	font-weight: 500;
-}
-
-.value-card p {
-	font-size: 0.92rem;
-	color: var(--ide-text-muted);
-	line-height: 1.6;
+article#gioi-thieu h1 {
+	font-size: 20px;
 }
 
 /* ==========================================================================
-   8. Section: Đội ngũ (Team Members / Dev Profiles)
+   4. Article: Giới thiệu Blakletterpress
    ========================================================================== */
-section#doi-ngu h2::before {
-	content: "👥";
+article#gioi-thieu figure {
+	margin: 16px 0 20px;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	overflow: hidden;
+	background: #f8fafc;
 }
 
+article#gioi-thieu figure img {
+	width: 100%;
+	height: auto;
+	max-height: 380px;
+	object-fit: cover;
+}
+
+article#gioi-thieu figcaption {
+	padding: 8px 14px;
+	font-size: 13px;
+	color: #64748b;
+	background: #f8fafc;
+	border-top: 1px solid #e2e8f0;
+}
+
+article#gioi-thieu p {
+	font-size: 14px;
+	line-height: 1.7;
+	color: #334155;
+	margin-bottom: 12px;
+}
+
+article#gioi-thieu p:last-child {
+	margin-bottom: 0;
+}
+
+article#gioi-thieu strong {
+	color: #1e40af;
+	background: #eff6ff;
+	padding: 2px 6px;
+	border-radius: 4px;
+	border: 1px solid #dbeafe;
+	font-weight: 700;
+}
+
+/* ==========================================================================
+   5. Section: Giá trị cốt lõi
+   ========================================================================== */
+.value-list {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+	padding: 0;
+	margin: 0;
+}
+
+.value-card {
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	padding: 16px 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	transition: all 0.2s ease;
+}
+
+.value-card:hover {
+	background: #ffffff;
+	border-color: #94a3b8;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+	transform: translateY(-2px);
+}
+
+.value-card h3 {
+	font-size: 15px;
+	font-weight: 700;
+	color: #1e40af;
+	margin: 0;
+}
+
+.value-card p {
+	font-size: 13px;
+	color: #475569;
+	line-height: 1.5;
+	margin: 0;
+}
+
+/* ==========================================================================
+   6. Section: Đội ngũ
+   ========================================================================== */
 .team-list {
 	list-style: none;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
+	gap: 16px;
+	padding: 0;
+	margin: 0;
 }
 
 .member {
-	background: var(--ide-bg-card);
-	border: 1px solid var(--ide-border);
-	border-radius: var(--radius-md);
-	padding: 24px 18px;
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	padding: 18px 12px;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 12px;
-	transition: var(--transition);
-	position: relative;
+	gap: 8px;
+	transition: all 0.2s ease;
 }
 
 .member:hover {
-	transform: translateY(-4px);
-	border-color: var(--ide-cyan);
-	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), var(--shadow-glow);
+	background: #ffffff;
+	border-color: #94a3b8;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+	transform: translateY(-2px);
 }
 
 .member img {
-	width: 108px;
-	height: 108px;
+	width: 90px;
+	height: 90px;
 	border-radius: 50%;
 	object-fit: cover;
-	border: 3px solid var(--ide-border);
-	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
-	transition: var(--transition);
-}
-
-.member:hover img {
-	border-color: var(--ide-cyan);
-	transform: scale(1.05);
-	box-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+	border: 2px solid #cbd5e1;
+	margin-bottom: 4px;
 }
 
 .member h3 {
-	font-family: var(--font-mono);
-	font-size: 1.1rem;
-	font-weight: 600;
-	color: var(--ide-text-bright);
-	margin-top: 4px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #0f172a;
+	margin: 0;
 }
 
 .member p {
-	font-size: 0.85rem;
-	font-family: var(--font-mono);
-	color: var(--ide-green);
-	background: rgba(52, 211, 153, 0.08);
-	border: 1px solid rgba(52, 211, 153, 0.2);
-	padding: 4px 10px;
-	border-radius: 14px;
+	font-size: 12px;
+	color: #475569;
+	margin: 0;
 	line-height: 1.4;
 }
 
 /* ==========================================================================
-   9. Section: Liên hệ (Terminal / Command Runner Form)
+   7. Section: Liên hệ
    ========================================================================== */
-section#lien-he h2::before {
-	content: ">_";
-	color: var(--ide-green);
-	font-weight: 700;
-}
-
 .contact-form {
-	background: var(--ide-bg-input);
-	border: 1px solid var(--ide-border);
-	border-radius: var(--radius-md);
-	padding: 24px;
-	box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
 	display: flex;
 	flex-direction: column;
-	gap: 18px;
+	gap: 14px;
 }
 
 .contact-form p {
-	display: flex;
-	flex-direction: column;
-	gap: 6px;
+	margin: 0;
 }
 
 .contact-form p br {
-	display: none; /* Clean up legacy <br> inside form */
+	display: none;
 }
 
 .contact-form label {
-	font-family: var(--font-mono);
-	font-size: 0.85rem;
-	font-weight: 600;
-	color: var(--ide-text-muted);
-	display: flex;
-	align-items: center;
-	gap: 6px;
-}
-
-.contact-form label::before {
-	content: "$";
-	color: var(--ide-purple);
+	display: block;
+	font-size: 13px;
 	font-weight: 700;
+	color: #334155;
+	margin-bottom: 6px;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
 	width: 100%;
-	background: var(--ide-bg-panel);
-	border: 1px solid var(--ide-border);
-	border-radius: var(--radius-sm);
-	padding: 12px 14px;
-	color: var(--ide-text-bright);
-	font-family: var(--font-mono);
-	font-size: 0.92rem;
-	outline: none;
-	transition: var(--transition);
-	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
+	padding: 9px 12px;
+	font-family: inherit;
+	font-size: 14px;
+	background: #ffffff;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	color: #1e293b;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
-	border-color: var(--ide-cyan);
-	background: #192030;
-	box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2), inset 0 1px 4px rgba(0, 0, 0, 0.3);
+	outline: none;
+	border-color: #2563eb;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .contact-form textarea {
+	min-height: 90px;
 	resize: vertical;
-	min-height: 100px;
-	line-height: 1.6;
+	line-height: 1.5;
 }
 
 .contact-form button[type="submit"] {
-	align-self: flex-start;
-	background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #4338ca 100%);
+	font-family: inherit;
+	background-color: #2563eb;
 	color: #ffffff;
-	border: 1px solid rgba(56, 189, 248, 0.4);
-	font-family: var(--font-mono);
-	font-size: 0.92rem;
-	font-weight: 600;
-	padding: 12px 28px;
-	border-radius: var(--radius-sm);
+	border: 1px solid #1d4ed8;
+	border-radius: 6px;
+	padding: 10px 24px;
+	font-size: 14px;
+	font-weight: 700;
 	cursor: pointer;
-	transition: var(--transition);
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
-}
-
-.contact-form button[type="submit"]::before {
-	content: "▶";
-	font-size: 0.75rem;
+	align-self: flex-start;
+	transition: all 0.15s ease;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .contact-form button[type="submit"]:hover {
-	background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #4f46e5 100%);
-	transform: translateY(-2px);
-	box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
-	border-color: var(--ide-cyan);
-}
-
-.contact-form button[type="submit"]:active {
-	transform: translateY(0);
+	background-color: #1d4ed8;
+	box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 }
 
 /* ==========================================================================
-   10. Sidebar: Explorer & Recent Posts
+   8. Sidebar: Bài viết gần đây
    ========================================================================== */
-.sidebar {
-	background: var(--ide-bg-sidebar);
-	border-color: var(--ide-border);
-	position: sticky;
-	top: 86px;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-}
-
-.sidebar h2::before {
-	content: "📂";
-}
-
 .sidebar .recent {
 	list-style: none;
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+	padding: 0;
+	margin: 0 0 16px;
+}
+
+.sidebar .recent li {
+	margin: 10px 0;
+	position: relative;
+	padding-left: 16px;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.sidebar .recent li::before {
+	content: "▪";
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #94a3b8;
 }
 
 .sidebar .recent li a {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	font-family: var(--font-mono);
-	font-size: 0.88rem;
-	color: var(--ide-text-primary);
-	padding: 10px 14px;
-	background: var(--ide-bg-panel);
-	border: 1px solid var(--ide-border);
-	border-radius: var(--radius-sm);
-	transition: var(--transition);
+	color: #2563eb;
 	text-decoration: none;
-}
-
-.sidebar .recent li a::before {
-	content: "📄";
-	font-size: 0.9rem;
 }
 
 .sidebar .recent li a:hover {
-	color: var(--ide-cyan);
-	background: var(--ide-bg-hover);
-	border-color: var(--ide-border-hover);
-	transform: translateX(4px);
-	text-decoration: none;
+	color: #1d4ed8;
+	text-decoration: underline;
 }
 
 .sidebar > p {
-	font-size: 0.9rem;
-	color: var(--ide-text-muted);
+	font-size: 13px;
+	color: #64748b;
+	margin: 0;
 	padding-top: 14px;
-	border-top: 1px dashed var(--ide-border);
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	flex-wrap: wrap;
-}
-
-.sidebar > p a {
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-	color: #60a5fa;
-	background: rgba(96, 165, 250, 0.1);
-	border: 1px solid rgba(96, 165, 250, 0.25);
-	padding: 4px 10px;
-	border-radius: 4px;
-	font-family: var(--font-mono);
-	font-size: 0.85rem;
-}
-
-.sidebar > p a:hover {
-	background: rgba(96, 165, 250, 0.2);
-	border-color: #60a5fa;
-	text-decoration: none;
+	border-top: 1px dashed #cbd5e1;
 }
 
 /* ==========================================================================
-   11. Footer: IDE Status Bar & Metadata Panels
+   9. Footer: Đồng bộ phong cách hệ thống
    ========================================================================== */
 .site-footer {
-	background: var(--ide-bg-statusbar);
-	border-top: 1px solid var(--ide-border);
-	margin-top: 48px;
-	padding: 40px 24px 20px;
-	color: var(--ide-text-muted);
-	position: relative;
+	background: #ffffff;
+	border: 1px solid #cbd5e1;
+	border-radius: 8px;
+	padding: 24px 28px 18px;
+	margin-top: 24px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .footer-cols {
 	list-style: none;
-	max-width: var(--max-width);
-	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 28px;
-	padding-bottom: 32px;
-	border-bottom: 1px solid var(--ide-border);
+	gap: 20px;
+	padding: 0 0 18px;
+	margin: 0;
+	border-bottom: 1px dashed #cbd5e1;
 }
 
 .footer-cols li {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
-}
-
-.footer-cols h3 {
-	font-family: var(--font-mono);
-	font-size: 0.95rem;
-	font-weight: 600;
-	color: var(--ide-text-bright);
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-	display: flex;
-	align-items: center;
 	gap: 6px;
 }
 
-.footer-cols h3::before {
-	content: "▪";
-	color: var(--ide-cyan);
+.footer-cols h3 {
+	font-size: 14px;
+	font-weight: 700;
+	color: #0f172a;
+	margin: 0;
 }
 
 .footer-cols p {
-	font-size: 0.88rem;
-	line-height: 1.6;
-	color: var(--ide-text-muted);
+	font-size: 13px;
+	color: #475569;
+	line-height: 1.5;
+	margin: 0;
 }
 
-/* Status Bar Bottom Line (VS Code / Antigravity Status Bar Look) */
 .copyright {
-	max-width: var(--max-width);
-	margin: 16px auto 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-family: var(--font-mono);
-	font-size: 0.8rem;
-	color: var(--ide-text-faint);
-}
-
-.copyright::before {
-	content: "● Ready  |  UTF-8  |  HTML5 & CSS3  |  git:main*";
-	color: var(--ide-green);
-	font-size: 0.78rem;
+	margin-top: 16px;
+	text-align: center;
+	font-size: 13px;
+	color: #94a3b8;
 }
 
 .copyright small {
@@ -828,93 +476,57 @@ section#lien-he h2::before {
 }
 
 /* ==========================================================================
-   12. Responsive Breakpoints (Media Queries)
+   10. Responsive Media Queries (Màn hình PC, Tablet, Mobile)
    ========================================================================== */
 
-/* Tablet (Screens <= 1024px) */
-@media (max-width: 1024px) {
+/* Tablet (Màn hình <= 900px) */
+@media (max-width: 900px) {
 	.layout {
 		grid-template-columns: 1fr;
-		gap: 24px;
-	}
-
-	.sidebar {
-		position: static;
+		gap: 20px;
 	}
 
 	.value-list {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
+	.team-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
 	.footer-cols {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 20px;
+		gap: 18px;
 	}
 }
 
-/* Small Tablet & Phablet (Screens <= 768px) */
-@media (max-width: 768px) {
+/* Mobile (Màn hình <= 600px) */
+@media (max-width: 600px) {
+	body {
+		padding: 16px 12px;
+	}
+
 	.site-header {
-		padding: 12px 16px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
 	}
 
-	.site-header::before {
-		display: none; /* Hide window dots on mobile to save space */
-	}
-
-	.main-nav {
-		width: 100%;
-		margin-left: 0;
+	.tagline {
+		padding-left: 0;
+		border-left: none;
 	}
 
 	.main-nav ul {
 		width: 100%;
-		justify-content: space-around;
-	}
-
-	.main-nav li a {
-		padding: 6px 10px;
-		font-size: 0.8rem;
-	}
-
-	.layout {
-		padding: 0 16px;
-		margin: 20px auto;
+		justify-content: flex-start;
 	}
 
 	main > article,
 	main > section,
-	.sidebar {
-		padding: 20px 16px;
-	}
-
-	article#gioi-thieu figure img {
-		height: 260px;
-	}
-
-	.team-list {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.copyright {
-		flex-direction: column;
-		gap: 8px;
-		text-align: center;
-	}
-
-	.copyright::before {
-		font-size: 0.75rem;
-	}
-}
-
-/* Mobile Devices (Screens <= 576px) */
-@media (max-width: 576px) {
-	.site-name {
-		font-size: 1.1rem;
-	}
-
-	.tagline {
-		font-size: 0.75rem;
+	.sidebar,
+	.site-footer {
+		padding: 18px 16px;
 	}
 
 	.value-list {
@@ -927,23 +539,10 @@ section#lien-he h2::before {
 
 	.footer-cols {
 		grid-template-columns: 1fr;
-		gap: 18px;
-	}
-
-	article#gioi-thieu h1 {
-		font-size: 1.45rem;
-	}
-
-	article#gioi-thieu figure img {
-		height: 200px;
-	}
-
-	.contact-form {
-		padding: 16px;
+		gap: 16px;
 	}
 
 	.contact-form button[type="submit"] {
 		width: 100%;
-		justify-content: center;
 	}
 }
