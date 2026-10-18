@@ -66,13 +66,26 @@ WEB-Asignment/
 │   ├── index.html                  # Cây thư mục điều hướng Assignment 4
 │   ├── README.md                   # Báo cáo tổng kết Assignment 4
 │   │
-│   └── bai-tap-1/                  # Bài tập 1: Phiếu báo giá & Phiếu xác nhận đơn in
-│       ├── index.html              # Bài A: Phiếu báo giá in thiệp (js/bai-a-bao-gia.js)
-│       ├── about.html              # Bài B: Phiếu xác nhận đơn in & 12 testcases (js/bai-b-phieu-in.js)
-│       ├── news.html, blog.html
-│       ├── css/                    # bai-js.css, style.css
-│       ├── fonts/, images/
-│       └── js/                     # bai-a-bao-gia.js, bai-b-phieu-in.js, ho-tro.js, kiem-tra.js
+│   ├── bai-tap-1/                  # Bài tập 1: Phiếu báo giá & Phiếu xác nhận đơn in
+│   │   ├── index.html              # Bài A: Phiếu báo giá in thiệp (js/bai-a-bao-gia.js)
+│   │   ├── about.html              # Bài B: Phiếu xác nhận đơn in & 12 testcases (js/bai-b-phieu-in.js)
+│   │   ├── news.html, blog.html
+│   │   ├── css/, fonts/, images/
+│   │   └── js/                     # bai-a-bao-gia.js, bai-b-phieu-in.js, ho-tro.js, kiem-tra.js
+│   │
+│   ├── bai-tap-2/                  # Bài tập 2: Tin tức JSON & Giỏ hàng OOP
+│   │   ├── news.html               # Bài A: Tin tức JSON & Thống kê tags (js/bai-a-tin-tuc.js)
+│   │   ├── index.html              # Bài B: Giỏ hàng OOP & 20 testcases (js/bai-b-gio-hang.js)
+│   │   ├── about.html, blog.html
+│   │   ├── css/, fonts/, images/
+│   │   └── js/                     # bai-a-tin-tuc.js, bai-b-gio-hang.js, ho-tro.js, kiem-tra.js
+│   │
+│   └── bai-tap-3/                  # Bài tập 3: Gallery tương tác & Lọc/Đăng tin tức
+│       ├── index.html              # Bài A: Thư viện ảnh tương tác Gallery (js/bai-a-gallery.js)
+│       ├── news.html               # Bài B: Lọc tin & Đăng tin nhanh & 18 testcases (js/bai-b-tin-nhanh.js)
+│       ├── about.html, blog.html
+│       ├── css/, fonts/, images/
+│       └── js/                     # bai-a-gallery.js, bai-b-tin-nhanh.js, ho-tro.js, kiem-tra.js
 │
 └── README.md
 ```
@@ -101,14 +114,18 @@ WEB-Asignment/
   - [trang-goc.html](https://dngk2408.id.vn/assignment-03/bai-tap-4/trang-goc.html)
   - [style.css](./assignment-03/bai-tap-4/style.css)
 
-### 3. [Assignment 4: JavaScript Cơ bản — Phiếu báo giá & Phiếu xác nhận đơn in](./assignment-04/)
+### 3. [Assignment 4: JavaScript Cơ bản — Báo giá, Giỏ hàng OOP & Tương tác DOM](./assignment-04/)
 - **Trực tiếp Hub:** [https://dngk2408.id.vn/assignment-04/](https://dngk2408.id.vn/assignment-04/)
-- **Bài tập 1:** [https://dngk2408.id.vn/assignment-04/bai-tap-1/](https://dngk2408.id.vn/assignment-04/bai-tap-1/)
+- **Báo cáo tổng kết Assignment 4:** [README.md](./assignment-04/README.md)
+- **Bài tập 1 (Báo giá & Xác nhận đơn in):** [https://dngk2408.id.vn/assignment-04/bai-tap-1/](https://dngk2408.id.vn/assignment-04/bai-tap-1/)
   - [Bài A — Phiếu báo giá in thiệp (index.html)](https://dngk2408.id.vn/assignment-04/bai-tap-1/index.html)
   - [Bài B — Phiếu xác nhận đơn in & Test 12/12 Đạt (about.html)](https://dngk2408.id.vn/assignment-04/bai-tap-1/about.html)
-  - [Mã nguồn js/bai-a-bao-gia.js](./assignment-04/bai-tap-1/js/bai-a-bao-gia.js)
-  - [Mã nguồn js/bai-b-phieu-in.js](./assignment-04/bai-tap-1/js/bai-b-phieu-in.js)
-  - [Báo cáo tổng kết Assignment 4](./assignment-04/README.md)
+- **Bài tập 2 (Tin tức JSON & Giỏ hàng OOP):** [https://dngk2408.id.vn/assignment-04/bai-tap-2/](https://dngk2408.id.vn/assignment-04/bai-tap-2/)
+  - [Bài A — Tin tức JSON & Thống kê tags (news.html)](https://dngk2408.id.vn/assignment-04/bai-tap-2/news.html)
+  - [Bài B — Giỏ hàng OOP & Test 20/20 Đạt (index.html)](https://dngk2408.id.vn/assignment-04/bai-tap-2/index.html)
+- **Bài tập 3 (Gallery tương tác & Lọc/Đăng tin):** [https://dngk2408.id.vn/assignment-04/bai-tap-3/](https://dngk2408.id.vn/assignment-04/bai-tap-3/)
+  - [Bài A — Thư viện ảnh tương tác Gallery (index.html)](https://dngk2408.id.vn/assignment-04/bai-tap-3/index.html)
+  - [Bài B — Lọc & Đăng tin nhanh & Test 18/18 Đạt (news.html)](https://dngk2408.id.vn/assignment-04/bai-tap-3/news.html)
 
 ---
 

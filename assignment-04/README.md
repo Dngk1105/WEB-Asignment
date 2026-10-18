@@ -1,4 +1,4 @@
-# Assignment 04 — JavaScript Cơ bản: Phiếu báo giá & Xác nhận đơn in
+# Assignment 04 — JavaScript Cơ bản: Báo giá, Giỏ hàng OOP & Tương tác DOM
 
 > Học phần **IT4409 — Lập trình Web** | Sinh viên: **Hà Tuấn Dũng - 20235299**
 
@@ -11,70 +11,82 @@ assignment-04/
 ├── index.html                      # Trang điều hướng tổng quan Assignment 4
 ├── README.md                       # Báo cáo và giải trình kỹ thuật Assignment 4
 │
-└── bai-tap-1/                      # Bài tập 1: Lập phiếu báo giá & xác nhận đơn in
-    ├── index.html                  # Giao diện Bài A: Phiếu báo giá in thiệp
-    ├── about.html                  # Giao diện Bài B: Phiếu xác nhận đơn in & 12 testcases
-    ├── blog.html                   # Trang Blog mẫu Blakletterpress
-    ├── news.html                   # Trang News mẫu Blakletterpress
-    ├── css/
-    │   ├── bai-js.css              # Style hiển thị khung kết quả #ket-qua
-    │   └── style.css               # Style giao diện template Blakletterpress
-    ├── fonts/                      # Bộ font PT Serif & UnifrakturCook
-    ├── images/                     # Ảnh giao diện & tài nguyên
+├── bai-tap-1/                      # Bài tập 1: Lập phiếu báo giá & xác nhận đơn in
+│   ├── index.html                  # Giao diện Bài A: Phiếu báo giá in thiệp
+│   ├── about.html                  # Giao diện Bài B: Phiếu xác nhận đơn in & 12 testcases
+│   ├── news.html, blog.html
+│   ├── css/, fonts/, images/
+│   └── js/
+│       ├── bai-a-bao-gia.js        # Bài 1a: Hoàn thiện 19 chỗ trống (Scope, Hoisting, Type Coercion...)
+│       ├── bai-b-phieu-in.js       # Bài 1b: 4 hàm xử lý đơn in (tinhTong, moTaInLai, inPhieu, taoDonInLai)
+│       ├── ho-tro.js, kiem-tra.js  # 12/12 testcases Đạt
+│
+├── bai-tap-2/                      # Bài tập 2: Tin tức JSON & Giỏ hàng OOP
+│   ├── news.html                   # Giao diện Bài A: Tải 4 tin từ JSON mẫu, thống kê tags & views
+│   ├── index.html                  # Giao diện Bài B: Giỏ hàng OOP & 20 testcases
+│   ├── about.html, blog.html
+│   ├── css/, fonts/, images/
+│   └── js/
+│       ├── bai-a-tin-tuc.js        # Bài 2a: Hoàn thiện 30 chỗ trống (JSON, Array methods, Class, Reduce...)
+│       ├── bai-b-gio-hang.js       # Bài 2b: Xây dựng Class GioHang & hàm napGioHang
+│       ├── ho-tro.js, kiem-tra.js  # 20/20 testcases Đạt
+│
+└── bai-tap-3/                      # Bài tập 3: Thư viện ảnh tương tác & Đăng tin nhanh
+    ├── index.html                  # Giao diện Bài A: Gallery ảnh tương tác, đổi ảnh lớn & khoá thư viện
+    ├── news.html                   # Giao diện Bài B: Lọc tin thời gian thực & Form đăng tin nhanh
+    ├── about.html, blog.html
+    ├── css/, fonts/, images/
     └── js/
-        ├── bai-a-bao-gia.js        # Bài 1a: Hoàn thiện 19 chỗ trống (Scope, Hoisting, Type Coercion...)
-        ├── bai-b-phieu-in.js       # Bài 1b: Xây dựng 4 hàm xử lý đơn in (tinhTong, moTaInLai, inPhieu, taoDonInLai)
-        ├── ho-tro.js               # Hàm hienThi(noiDung) in kết quả vào DOM
-        └── kiem-tra.js             # Bộ 12 testcases tự động (T1 - T12)
+        ├── bai-a-gallery.js        # Bài 3a: Hoàn thiện 27 chỗ trống (DOM query, Event Delegation, textContent...)
+        ├── bai-b-tin-nhanh.js       # Bài 3b: Xử lý chức năng F1 - F5 (Lọc tin, Read more, Đăng tin)
+        ├── ho-tro.js, kiem-tra.js  # 18/18 testcases Đạt
 ```
 
 ---
 
 ## 2. Danh mục Liên kết Trực tiếp & Nộp bài
 
-- **Trang chủ Assignment 04:** [https://dngk2408.id.vn/assignment-04/](https://dngk2408.id.vn/assignment-04/)
-- **Bài A (Phiếu báo giá):** [https://dngk2408.id.vn/assignment-04/bai-tap-1/index.html](https://dngk2408.id.vn/assignment-04/bai-tap-1/index.html)
-- **Bài B (Phiếu xác nhận đơn in & Test):** [https://dngk2408.id.vn/assignment-04/bai-tap-1/about.html](https://dngk2408.id.vn/assignment-04/bai-tap-1/about.html)
-- **Mã nguồn Bài 1a:** [`bai-a-bao-gia.js`](./bai-tap-1/js/bai-a-bao-gia.js)
-- **Mã nguồn Bài 1b:** [`bai-b-phieu-in.js`](./bai-tap-1/js/bai-b-phieu-in.js)
+- **Trang chủ Hub Assignment 04:** [https://dngk2408.id.vn/assignment-04/](https://dngk2408.id.vn/assignment-04/)
+- **Bài tập 1 (Báo giá & Xác nhận đơn in):** [https://dngk2408.id.vn/assignment-04/bai-tap-1/](https://dngk2408.id.vn/assignment-04/bai-tap-1/)
+  - [Bài A — Phiếu báo giá (index.html)](https://dngk2408.id.vn/assignment-04/bai-tap-1/index.html)
+  - [Bài B — Phiếu in & Test 12/12 Đạt (about.html)](https://dngk2408.id.vn/assignment-04/bai-tap-1/about.html)
+- **Bài tập 2 (Tin tức JSON & Giỏ hàng OOP):** [https://dngk2408.id.vn/assignment-04/bai-tap-2/](https://dngk2408.id.vn/assignment-04/bai-tap-2/)
+  - [Bài A — Trang Tin tức JSON (news.html)](https://dngk2408.id.vn/assignment-04/bai-tap-2/news.html)
+  - [Bài B — Giỏ hàng OOP & Test 20/20 Đạt (index.html)](https://dngk2408.id.vn/assignment-04/bai-tap-2/index.html)
+- **Bài tập 3 (Gallery ảnh & Đăng tin nhanh):** [https://dngk2408.id.vn/assignment-04/bai-tap-3/](https://dngk2408.id.vn/assignment-04/bai-tap-3/)
+  - [Bài A — Thư viện ảnh tương tác Gallery (index.html)](https://dngk2408.id.vn/assignment-04/bai-tap-3/index.html)
+  - [Bài B — Lọc tin & Đăng tin nhanh & Test 18/18 Đạt (news.html)](https://dngk2408.id.vn/assignment-04/bai-tap-3/news.html)
 
 ---
 
 ## 3. Nội dung Kỹ thuật Chi tiết
 
-### 3.1. Bài 1a: Điền chỗ trống (`js/bai-a-bao-gia.js`)
-Phân tích 19 chỗ trống bao phủ các kiến thức nền tảng của JavaScript:
-1. **Khai báo biến (`const` / `let`):** Dùng `const` cho hằng số không gán lại (`TEN_XUONG`), dùng `let` cho biến cần gán lại trong phạm vi khối (`soLuong`, `giamGia`).
-2. **Ép kiểu & Toán tử so sánh:** Chuỗi lấy từ form `"200"` khi thực hiện phép `+` với số `300` sẽ bị ép kiểu chuỗi (`"300200"`). So sánh lỏng `==` tự động ép kiểu (`true`), so sánh nghiêm ngặt `===` kiểm tra cả kiểu dữ liệu (`false`). Chuyển đổi tường minh qua `Number()`.
-3. **Phạm vi (Scope):** Biến khai báo trong khối `if` bằng `const`/`let` chỉ tồn tại trong block đó; truy cập từ ngoài sẽ ném lỗi `ReferenceError`.
-4. **Cơ chế Hoisting:** `var` được hoisted và khởi tạo với `undefined`. Trong khi `let`/`const` được hoisted nhưng nằm trong vùng chết tạm thời (TDZ), gây lỗi `ReferenceError` nếu truy cập trước khi khai báo.
-5. **Xử lý `null` và `undefined`:** Biểu thức `x == null` bao quát chính xác cả `null` và `undefined`, không bắt nhầm chuỗi rỗng `""` hay số `0`.
-6. **Kiểu dữ liệu tham chiếu (Reference Types):** Object được gán theo tham chiếu; thay đổi thuộc tính qua biến tham chiếu thứ hai sẽ ảnh hưởng đến object gốc. Từ khóa `const` không cho phép gán lại object mới (`donMau = {}`) nhưng cho phép chỉnh sửa thuộc tính (`donMau.giay = "Kraft"`).
-7. **Cơ chế tự động chèn dấu chấm phẩy (ASI):** Nếu để lệnh `return` đứng một mình một dòng rồi mới xuống dòng mở ngoặc, JS sẽ tự chèn dấu chấm phẩy (`return;`), khiến hàm trả về `undefined`.
-8. **Template Literals:** Dùng cú pháp dấu huyền (`` ` ``) và cú pháp nội suy `${...}` để tạo chuỗi nhiều dòng mà không cần nối chuỗi bằng `+`.
+### 3.1. Bài tập 1: Phiếu báo giá & Phiếu xác nhận đơn in
+- **Bài 1a (`bai-a-bao-gia.js`):** Hoàn thiện 19 chỗ trống về biến `const`/`let`, scope, hoisting, so sánh lỏng/nghiêm ngặt `==` vs `===`, ép kiểu số, toán tử so sánh `null`, tránh lỗi ASI khi `return` và template literal.
+- **Bài 1b (`bai-b-phieu-in.js`):** Xây dựng 4 hàm `tinhTong`, `moTaInLai`, `inPhieu`, `taoDonInLai` (sử dụng deep copy với Spread operator để bảo toàn tính bất biến cho đơn cũ). Bộ test đạt **12/12 Đạt**.
 
-### 3.2. Bài 1b: Xây dựng 4 hàm nghiệp vụ (`js/bai-b-phieu-in.js`)
-1. `tinhTong(soLuong, donGia, phiGiao)`: Ép kiểu các tham số đầu vào bằng `Number()`, tính tiền hàng `soLuong × donGia`, cộng thuế VAT 10% và phí giao hàng, trả về kiểu `number`.
-2. `moTaInLai(soLan)`: Xử lý theo bảng trạng thái: `null`/`undefined` trả về `"Chưa rõ"`, `0` trả về `"In lần đầu"`, số dương `n` trả về `"In lại lần n"`.
-3. `inPhieu(don)`: Dùng template literal ghép 5 dòng chính xác từng khoảng trắng và ký tự; gọi `TEN_XUONG.toUpperCase()`, `tinhTong(...)`, `moTaInLai(don.soLanIn)`.
-4. `taoDonInLai(donCu, sdtMoi)`: Áp dụng kỹ thuật clone bất biến (immutability) với toán tử spread `...`, nhân bản object lồng nhau `khach`, cập nhật số điện thoại mới và tăng `soLanIn` lên 1 mà không làm thay đổi đơn cũ.
+### 3.2. Bài tập 2: Tin tức JSON & Giỏ hàng OOP
+- **Bài 2a (`bai-a-tin-tuc.js`):** Hoàn thiện 30 chỗ trống: `JSON.parse` / `JSON.stringify`, các thao tác mảng (`push`, `unshift`, `pop`, `shift`), phương thức xử lý mảng nâng cao (`filter`, `map`, `reduce`), truy cập thuộc tính dấu cách qua bracket notation `["tac gia"]`, xóa thuộc tính với `delete`, cú pháp khai báo `class` và `constructor`.
+- **Bài 2b (`bai-b-gio-hang.js`):**
+  - Xây dựng `class GioHang` với các phương thức: `them(sp, soLuong)`, `xoa(id)`, `tongTien()`, `thongKeTheoLoai()`, `dongDatNhat()`, `layDanhSach()`, `xuatJSON()`.
+  - Xây dựng hàm `napGioHang(chuoiJSON)` khôi phục instance `GioHang`.
+  - Đảm bảo tính đóng gói và an toàn dữ liệu: danh mục gốc không bị sửa, trả về bản sao chứa `thanhTien` mà không sửa mảng nội bộ. Bộ test đạt **20/20 Đạt**, giỏ hàng hiển thị đúng **Tổng: 325000 đ**.
+
+### 3.3. Bài tập 3: Gallery tương tác & Lọc / Đăng tin tức
+- **Bài 3a (`bai-a-gallery.js`):** Hoàn thiện 27 chỗ trống về DOM traversal (`querySelector`, `querySelectorAll`, `getElementById`, `firstChild`, `childNodes`, `parentNode`), tạo và chèn DOM (`createElement`, `textContent`, `appendChild`, `prepend`), Event Delegation trên thẻ cha `ul` và gỡ bỏ trình lắng nghe bằng `removeEventListener`.
+- **Bài 3b (`bai-b-tin-nhanh.js`):**
+  - **F1 (Bộ đếm):** Hiển thị `Đang hiển thị x/y tin` chính xác tại mọi thời điểm.
+  - **F2 & F3 (Lọc & Thông báo):** Lọc theo `keyup` không phân biệt hoa thường trong cả tiêu đề và nội dung; hiển thị thông báo `#khong-thay` nguyên văn ký tự gõ.
+  - **F4 (Read more / Thu gọn):** 1 trình lắng nghe click duy nhất trên `#list` (Event Delegation) để toggle class `day-du` và đổi nhãn nút.
+  - **F5 (Đăng tin nhanh):** Validate form, chèn `li` mới lên đầu danh sách qua `prepend`, chống chèn mã XSS bằng `textContent`. Bộ test đạt **18/18 Đạt**.
 
 ---
 
-## 4. Kết quả Kiểm thử Tự động (12/12 Testcases Đạt)
+## 4. Bảng tổng kết kết quả kiểm thử (100% Đạt)
 
-```
-KIỂM TRA BÀI B: 12/12 đạt
-✅ Đạt  T1  tinhTong nhận số: (250, 1500, 30000) → 442500
-✅ Đạt  T2  tinhTong nhận chuỗi: ("250", "1500", "30000") → 442500
-✅ Đạt  T3  tinhTong trả về kiểu number
-✅ Đạt  T4  tinhTong("100", "2000", "0") → 220000
-✅ Đạt  T5  moTaInLai(0) → "In lần đầu"
-✅ Đạt  T6  moTaInLai(2) → "In lại lần 2"
-✅ Đạt  T7  moTaInLai(null) và moTaInLai(undefined) → "Chưa rõ"
-✅ Đạt  T8  inPhieu đúng từng ký tự (5 dòng)
-✅ Đạt  T9  taoDonInLai trả về object MỚI (khác đơn cũ)
-✅ Đạt  T10 đơn mới: sdt mới, soLanIn tăng 1
-✅ Đạt  T11 đơn cũ KHÔNG đổi sdt và soLanIn
-✅ Đạt  T12 sửa tên khách trên đơn mới không ảnh hưởng đơn cũ
-```
+| Bài tập | Bộ kiểm tra | Số lượng Testcases | Kết quả |
+| :--- | :--- | :---: | :---: |
+| **Bài 1b** | `assignment-04/bai-tap-1/js/kiem-tra.js` | 12 / 12 | ✅ 100% Đạt |
+| **Bài 2b** | `assignment-04/bai-tap-2/js/kiem-tra.js` | 20 / 20 | ✅ 100% Đạt |
+| **Bài 3b** | `assignment-04/bai-tap-3/js/kiem-tra.js` | 18 / 18 | ✅ 100% Đạt |
+| **Tổng cộng** | **Toàn bộ Assignment 04** | **50 / 50** | **✅ 100% Đạt** |
