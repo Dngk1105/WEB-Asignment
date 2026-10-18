@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 04 - JavaScript Cơ bản - Dunght</title>
+    <style>
+        body {
+            font-family: 'CaskaydiaCove Nerd Font Mono', monospace;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .back-link {
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .info {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        .info span {
+            margin-right: 18px;
+        }
+
+        .tree-container {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 24px 28px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .tree-title {
+            font-weight: 700;
+            font-size: 17px;
+            color: #0f172a;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        ul.tree {
+            list-style: none;
+            padding-left: 20px;
+            font-family: 'CaskaydiaCove Nerd Font Mono', "Consolas", "Monaco", "Courier New", monospace;
+            font-size: 14px;
+        }
+
+        ul.tree ul {
+            list-style: none;
+            padding-left: 26px;
+            border-left: 1px dashed #94a3b8;
+            margin: 4px 0 8px 10px;
+        }
+
+        ul.tree li {
+            margin: 6px 0;
+            position: relative;
+        }
+
+        ul.tree li::before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: -16px;
+            width: 12px;
+            height: 1px;
+            border-top: 1px dashed #94a3b8;
+        }
+
+        ul.tree>li::before {
+            display: none;
+        }
+
+        .folder {
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1d4ed8;
+        }
+
+        .badge-success {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html" class="back-link">← Về trang chủ</a>
+        <h1>Assignment 04 - JavaScript Cơ bản</h1>
+        <div class="info">
+            <span><strong>Hà Tuấn Dũng - 20235299</strong></span>
+            <span><strong>GitHub:</strong> <a href="https://github.com/Dngk1105/WEB-Asignment/tree/main/assignment-04"
+                    target="_blank">Dngk1105/WEB-Asignment/assignment-04</a></span>
+        </div>
+    </header>
+
+    <div class="tree-container">
+        <div class="tree-title">Cấu trúc trang Assignment 04</div>
+
+        <ul class="tree" style="padding-left: 0;">
+            <li>
+                <span class="folder">assignment-04/</span>
+                <ul>
+                    <!-- BÀI TẬP 1 -->
+                    <li>
+                        <span class="folder"><a href="./bai-tap-1/index.html">bai-tap-1/</a></span>
+                        <span class="badge-success">12/12 Testcases Đạt</span>
+                        <ul>
+                            <li>
+                                <a href="./bai-tap-1/index.html">index.html</a>
+                                <span style="color: #64748b;">(Bài A — Phiếu báo giá in thiệp)</span>
+                            </li>
+                            <li>
+                                <a href="./bai-tap-1/about.html">about.html</a>
+                                <span style="color: #64748b;">(Bài B — Phiếu xác nhận đơn in &amp; Bộ kiểm tra 12 testcases)</span>
+                            </li>
+                            <li><a href="./bai-tap-1/news.html">news.html</a></li>
+                            <li><a href="./bai-tap-1/blog.html">blog.html</a></li>
+                            <li>
+                                <span class="folder">css/</span>
+                                <ul>
+                                    <li><a href="./bai-tap-1/css/bai-js.css">bai-js.css</a></li>
+                                    <li><a href="./bai-tap-1/css/style.css">style.css</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="folder">js/</span>
+                                <ul>
+                                    <li>
+                                        <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-04/bai-tap-1/js/bai-a-bao-gia.js" target="_blank">bai-a-bao-gia.js</a>
+                                        <span style="color: #16a34a;">(19 chỗ trống hoàn chỉnh)</span>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-04/bai-tap-1/js/bai-b-phieu-in.js" target="_blank">bai-b-phieu-in.js</a>
+                                        <span style="color: #16a34a;">(4 hàm logic chuẩn đặc tả)</span>
+                                    </li>
+                                    <li><a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-04/bai-tap-1/js/ho-tro.js" target="_blank">ho-tro.js</a></li>
+                                    <li><a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-04/bai-tap-1/js/kiem-tra.js" target="_blank">kiem-tra.js</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- README -->
+                    <li style="margin-top: 14px;">
+                        <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-04/README.md"
+                            target="_blank">README.md</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hà Tuấn Dũng — Học phần IT4409 (Lập trình Web) | HUST</p>
+    </footer>
+
+</body>
+
+</html>

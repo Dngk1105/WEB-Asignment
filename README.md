@@ -62,6 +62,18 @@ WEB-Asignment/
 │       ├── style.css               # CSS chuẩn theme IDE Dark
 │       └── images/                 # Ảnh tài nguyên
 │
+├── assignment-04/                  # [Module độc lập Assignment 4]
+│   ├── index.html                  # Cây thư mục điều hướng Assignment 4
+│   ├── README.md                   # Báo cáo tổng kết Assignment 4
+│   │
+│   └── bai-tap-1/                  # Bài tập 1: Phiếu báo giá & Phiếu xác nhận đơn in
+│       ├── index.html              # Bài A: Phiếu báo giá in thiệp (js/bai-a-bao-gia.js)
+│       ├── about.html              # Bài B: Phiếu xác nhận đơn in & 12 testcases (js/bai-b-phieu-in.js)
+│       ├── news.html, blog.html
+│       ├── css/                    # bai-js.css, style.css
+│       ├── fonts/, images/
+│       └── js/                     # bai-a-bao-gia.js, bai-b-phieu-in.js, ho-tro.js, kiem-tra.js
+│
 └── README.md
 ```
 
@@ -89,10 +101,21 @@ WEB-Asignment/
   - [trang-goc.html](https://dngk2408.id.vn/assignment-03/bai-tap-4/trang-goc.html)
   - [style.css](./assignment-03/bai-tap-4/style.css)
 
+### 3. [Assignment 4: JavaScript Cơ bản — Phiếu báo giá & Phiếu xác nhận đơn in](./assignment-04/)
+- **Trực tiếp Hub:** [https://dngk2408.id.vn/assignment-04/](https://dngk2408.id.vn/assignment-04/)
+- **Bài tập 1:** [https://dngk2408.id.vn/assignment-04/bai-tap-1/](https://dngk2408.id.vn/assignment-04/bai-tap-1/)
+  - [Bài A — Phiếu báo giá in thiệp (index.html)](https://dngk2408.id.vn/assignment-04/bai-tap-1/index.html)
+  - [Bài B — Phiếu xác nhận đơn in & Test 12/12 Đạt (about.html)](https://dngk2408.id.vn/assignment-04/bai-tap-1/about.html)
+  - [Mã nguồn js/bai-a-bao-gia.js](./assignment-04/bai-tap-1/js/bai-a-bao-gia.js)
+  - [Mã nguồn js/bai-b-phieu-in.js](./assignment-04/bai-tap-1/js/bai-b-phieu-in.js)
+  - [Báo cáo tổng kết Assignment 4](./assignment-04/README.md)
+
 ---
 
 ## Hướng dẫn thêm bài tập mới (Tuần tiếp theo)
-Khi có bài tập mới (ví dụ Assignment 4), bạn chỉ cần làm 2 bước:
-1. Tạo thư mục mới: `assignment-04/` và đặt toàn bộ file bài tập vào đó.
-2. Mở `index.html` tại root, cập nhật thẻ `Assignment 4` thành trạng thái "Đã Hoàn Thành" kèm liên kết trỏ tới `./assignment-04/`.
-3. Commit và push lên GitHub, GitHub Actions sẽ tự động deploy lên GitHub Pages trong vòng 1 phút!
+Khi có bài tập mới (ví dụ Assignment 5), bạn chỉ cần làm 3 bước:
+1. Tạo thư mục mới: `assignment-XX/` (ví dụ `assignment-05/`) và đặt toàn bộ file bài tập vào đó theo mô hình Mini-Site độc lập.
+2. Tạo file `assignment-XX/index.html` và `assignment-XX/README.md` theo chuẩn tree navigation.
+3. Mở `index.html` và `README.md` tại root, cập nhật liên kết trỏ tới `./assignment-XX/`.
+4. Commit và push lên GitHub, GitHub Actions sẽ tự động deploy lên GitHub Pages trong vòng 1 phút!
+
