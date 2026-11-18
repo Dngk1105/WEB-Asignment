@@ -87,6 +87,13 @@ WEB-Asignment/
 │       ├── css/, fonts/, images/
 │       └── js/                     # bai-a-gallery.js, bai-b-tin-nhanh.js, ho-tro.js, kiem-tra.js
 │
+├── assignment-06/                  # [Module độc lập Assignment 6]
+│   ├── index.html                  # Cây thư mục điều hướng Assignment 6
+│   ├── README.md                   # Tài liệu kiến trúc Assignment 6
+│   ├── BAO-CAO-NOP-BAI.md          # Báo cáo kỹ thuật chuyên sâu (Component Tree, State Lifting, Props, Phân tích lỗi)
+│   └── bai-tap-1/                  # Bài tập 1: Ứng dụng React 18 CRUD Quản lý Người dùng
+│       └── index.html              # Standalone React App (Functional Components, Hooks, State Lifting)
+│
 └── README.md
 ```
 
@@ -127,11 +134,22 @@ WEB-Asignment/
   - [Bài A — Thư viện ảnh tương tác Gallery (index.html)](https://dngk2408.id.vn/assignment-04/bai-tap-3/index.html)
   - [Bài B — Lọc & Đăng tin nhanh & Test 18/18 Đạt (news.html)](https://dngk2408.id.vn/assignment-04/bai-tap-3/news.html)
 
+### 4. [Assignment 6: React 18 CRUD — Quản lý Người dùng & State Lifting](./assignment-06/)
+- **Trực tiếp Hub:** [https://dngk2408.id.vn/assignment-06/](https://dngk2408.id.vn/assignment-06/)
+- **Báo cáo kỹ thuật chuyên sâu:** [BAO-CAO-NOP-BAI.md](./assignment-06/BAO-CAO-NOP-BAI.md)
+  - *Sơ đồ Component Tree (Mermaid & ASCII)*
+  - *Sơ đồ Luồng dữ liệu State Lifting & 4 nguyên lý One-Way Data Flow, Sibling Communication, SSOT, Inversion of Control*
+  - *Bảng mô tả toàn bộ Props (kiểu dữ liệu, hướng truyền, mục đích)*
+  - *Phân tích 3 lỗi thực tế: Infinite loop render, Shallow Copy Mutation trên Object lồng nhau, Missing unique key*
+- **Bài tập 1 (Ứng dụng React 18 CRUD):** [https://dngk2408.id.vn/assignment-06/bai-tap-1/](https://dngk2408.id.vn/assignment-06/bai-tap-1/)
+  - [Ứng dụng React CRUD (index.html)](https://dngk2408.id.vn/assignment-06/bai-tap-1/index.html)
+- **Tài liệu tổng quan:** [README.md](./assignment-06/README.md)
+
 ---
 
 ## Hướng dẫn thêm bài tập mới (Tuần tiếp theo)
-Khi có bài tập mới (ví dụ Assignment 5), bạn chỉ cần làm 3 bước:
-1. Tạo thư mục mới: `assignment-XX/` (ví dụ `assignment-05/`) và đặt toàn bộ file bài tập vào đó theo mô hình Mini-Site độc lập.
+Khi có bài tập mới (ví dụ Assignment 7), bạn chỉ cần làm 3 bước:
+1. Tạo thư mục mới: `assignment-XX/` (ví dụ `assignment-07/`) và đặt toàn bộ file bài tập vào đó theo mô hình Mini-Site độc lập.
 2. Tạo file `assignment-XX/index.html` và `assignment-XX/README.md` theo chuẩn tree navigation.
 3. Mở `index.html` và `README.md` tại root, cập nhật liên kết trỏ tới `./assignment-XX/`.
 4. Commit và push lên GitHub, GitHub Actions sẽ tự động deploy lên GitHub Pages trong vòng 1 phút!

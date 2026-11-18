@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 06 - React CRUD &amp; State Lifting - Dunght</title>
+    <style>
+        body {
+            font-family: 'CaskaydiaCove Nerd Font Mono', monospace;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .back-link {
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .info {
+            color: #475569;
+            font-size: 15px;
+        }
+
+        .info span {
+            margin-right: 18px;
+        }
+
+        .tree-container {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 24px 28px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .tree-title {
+            font-weight: 700;
+            font-size: 17px;
+            color: #0f172a;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        ul.tree {
+            list-style: none;
+            padding-left: 20px;
+            font-family: 'CaskaydiaCove Nerd Font Mono', "Consolas", "Monaco", "Courier New", monospace;
+            font-size: 14px;
+        }
+
+        ul.tree ul {
+            list-style: none;
+            padding-left: 26px;
+            border-left: 1px dashed #94a3b8;
+            margin: 4px 0 8px 10px;
+        }
+
+        ul.tree li {
+            margin: 6px 0;
+            position: relative;
+        }
+
+        ul.tree li::before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: -16px;
+            width: 12px;
+            height: 1px;
+            border-top: 1px dashed #94a3b8;
+        }
+
+        ul.tree>li::before {
+            display: none;
+        }
+
+        .folder {
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1d4ed8;
+        }
+
+        .badge-success {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+
+        .badge-tech {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html" class="back-link">← Về trang chủ</a>
+        <h1>Assignment 06 - React CRUD &amp; State Lifting</h1>
+        <div class="info">
+            <span><strong>Hà Tuấn Dũng - 20235299</strong></span>
+            <span><strong>GitHub:</strong> <a href="https://github.com/Dngk1105/WEB-Asignment/tree/main/assignment-06"
+                    target="_blank">Dngk1105/WEB-Asignment/assignment-06</a></span>
+        </div>
+    </header>
+
+    <div class="tree-container">
+        <div class="tree-title">Cấu trúc trang Assignment 06</div>
+
+        <ul class="tree" style="padding-left: 0;">
+            <li>
+                <span class="folder">assignment-06/</span>
+                <ul>
+                    <!-- BÀI TẬP 1 -->
+                    <li>
+                        <span class="folder"><a href="./bai-tap-1/index.html">bai-tap-1/</a></span>
+                        <span class="badge-success">Đạt chuẩn đặc tả 100%</span>
+                        <span class="badge-tech">React 18 • Hooks • CDN Standalone</span>
+                        <ul>
+                            <li>
+                                <a href="./bai-tap-1/index.html">index.html</a>
+                                <span style="color: #64748b;">(Ứng dụng React 18 CRUD Quản lý Người dùng: App, SearchForm, AddUser, ResultTable)</span>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- BÁO CÁO NỘP BÀI -->
+                    <li style="margin-top: 14px;">
+                        <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-06/BAO-CAO-NOP-BAI.md"
+                            target="_blank">BAO-CAO-NOP-BAI.md</a>
+                        <span style="color: #16a34a;">(Báo cáo kỹ thuật chi tiết: Component Tree, State Lifting, Bảng Props &amp; Phân tích lỗi)</span>
+                    </li>
+
+                    <!-- README -->
+                    <li style="margin-top: 8px;">
+                        <a href="https://github.com/Dngk1105/WEB-Asignment/blob/main/assignment-06/README.md"
+                            target="_blank">README.md</a>
+                        <span style="color: #64748b;">(Tài liệu tổng quan kiến trúc và hướng dẫn triển khai)</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hà Tuấn Dũng — Học phần IT4409 (Lập trình Web) | HUST</p>
+    </footer>
+
+</body>
+
+</html>
