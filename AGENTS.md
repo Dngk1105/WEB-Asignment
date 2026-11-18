@@ -20,27 +20,44 @@
    - Bên trong `assignment-XX/` chia thành các thư mục con theo từng bài: `bai-tap-1/`, `bai-tap-2/`, v.v.
    - Mỗi bài tập con phải tự chứa đầy đủ tài nguyên của nó (`css/`, `js/`, `images/`, `fonts/`), không phụ thuộc chéo vào các bài tập tuần khác.
 2. **Tuyệt đối KHÔNG đặt file rời rạc ở Thư mục Gốc:**
-   - Thư mục root chỉ chứa: `index.html` (trang cây thư mục), `README.md`, `AGENTS.md`, cấu hình CI/CD (`.github/`), `CNAME`, `.nojekyll`, `404.html` và các trang chuyển hướng cũ.
+   - Thư mục root chỉ chứa: `index.html` (trang cây thư mục), `README.md`, `AGENTS.md`, `DESIGN_SYSTEM.md`, thư mục tài nguyên dùng chung `shared/` (`shared/css/design-tokens.css`), cấu hình CI/CD (`.github/`), `CNAME`, `.nojekyll`, `404.html` và các trang chuyển hướng cũ.
    - **CẤM** tạo các thư mục như `js/`, `css/` riêng lẻ tại root để chứa code của một bài tập cụ thể. Tất cả phải nằm trong `assignment-XX/bai-tap-Y/`.
 
 ---
 
-## 3. Quy chuẩn Giao diện & Hệ thống Điều hướng (Design System)
+## 3. Quy chuẩn Giao diện & Hệ thống Design System (Design System & Anti-Patterns)
 
-Tất cả các trang điều hướng (`index.html` tại root và `assignment-XX/index.html`) phải tuân thủ nghiêm ngặt phong cách thiết kế monospace:
-- **Typography:** `font-family: 'CaskaydiaCove Nerd Font Mono', monospace;`
-- **Tông màu:**
-  - Nền trang: `#f8fafc` (Slate light)
-  - Khung cây thư mục: Nền trắng `#ffffff`, viền `1px solid #cbd5e1`, bo góc `8px`, bóng mờ `0 1px 3px rgba(0, 0, 0, 0.05)`.
-  - Thư mục (`.folder`): Màu xanh đậm `#1e40af`, in đậm (`font-weight: 700`).
-  - Liên kết file (`a`): `#2563eb`, hover đổi sang `#1d4ed8` kèm gạch chân.
-  - Đường nối cây thư mục: `1px dashed #94a3b8`.
+Tất cả các trang điều hướng (`index.html` tại root, `assignment-XX/index.html`) và các ứng dụng bài tập con (`bai-tap-Y/index.html`) **BẮT BUỘC** tuân thủ triệt để phong cách thiết kế **Academic Monospace Minimalism** theo đặc tả tại [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) và sử dụng hệ thống tokens từ [shared/css/design-tokens.css](shared/css/design-tokens.css):
+
+### 3.1. Các Quy chuẩn Bắt buộc (Mandatory Standards)
+- **Typography:** `font-family: 'CaskaydiaCove Nerd Font Mono', 'Consolas', 'Monaco', 'Courier New', monospace;` (Đồng bộ font monospace trên toàn bộ các thành phần giao diện).
+- **Hệ màu chuẩn (Design Tokens):**
+  - Nền trang: `--color-bg: #f8fafc;` (Slate light).
+  - Nền Card & Modal: `--color-surface: #ffffff;` (Trắng thuần).
+  - Đường viền: `--color-border: #cbd5e1;` (Slate-300).
+  - Màu chữ chính: `--color-text-main: #0f172a;`, chữ nội dung: `--color-text-body: #1e293b;`, chữ phụ: `--color-text-muted: #475569;`.
+  - Màu chủ đạo (Primary): `--color-primary: #2563eb;`, hover: `--color-primary-hover: #1d4ed8;`, thư mục/nhãn: `--color-primary-dark: #1e40af;`.
+  - Màu cảnh báo/Xóa (Danger): `--color-danger: #b91c1c;`, hover: `--color-danger-hover: #991b1b;`, viền: `--color-danger-border: #fca5a5;`.
 - **Thành phần bắt buộc trên mỗi trang Hub (`assignment-XX/index.html`):**
   - Nút quay lại: `<a href="../index.html" class="back-link">← Về trang chủ</a>`
-  - Tiêu đề `<h1>Assignment XX - Tên chủ đề</h1>`
+  - Tiêu đề: `<h1>Assignment XX - Tên chủ đề</h1>`
   - Khung thông tin: `Hà Tuấn Dũng - 20235299` kèm link tới thư mục Assignment trên GitHub.
   - Cây thư mục `ul.tree` liệt kê đầy đủ các bài tập con, file HTML, CSS, JS và tài liệu.
   - Footer bản quyền: `&copy; 2026 Hà Tuấn Dũng — Học phần IT4409 (Lập trình Web) | HUST`
+
+### 3.2. Quy tắc Chống Mẫu Nghiêm ngặt (Strict Anti-Patterns)
+Mọi AI Agent khi phát triển hoặc sinh mã giao diện cho repository này **BẮT BUỘC** tuân thủ các quy tắc cấm sau:
+1. **NEVER use emojis or icons in UI elements:**
+   - **CẤM** chèn emoji hoặc biểu tượng hình ảnh vào nút bấm, tiêu đề, ô nhập liệu, bảng biểu hay huy hiệu (Ví dụ: CẤM `🗑️ Xóa`, `✏️ Sửa`, `🔍 Tìm kiếm`, `➕ Thêm mới`, `🚀 Submit`).
+   - **BẮT BUỘC** chỉ dùng văn bản rõ nghĩa hoặc ký tự bàn phím tối giản: `[+]`, `[X]`, `<-`, `Sửa`, `Xóa`, `Đóng`, `Lưu`, `Tìm theo tên...`.
+2. **NEVER use flashy SaaS gradients or neon styling:**
+   - **CẤM** dùng nền dải màu gradient rực rỡ (tím, hồng, pastel đa sắc kiểu landing page marketing/SaaS startup hiện đại).
+   - **BẮT BUỘC** dùng màu nền phẳng, tương phản cao, sạch sẽ (`#f8fafc`, `#ffffff`) theo phong cách học thuật Bách Khoa.
+3. **NEVER use heavy multi-layer shadows or blur glows:**
+   - **CẤM** các kiểu `box-shadow` nhiều lớp, bóng mờ phát sáng (glow), bóng màu mè gây rối mắt.
+   - **BẮT BUỘC** dùng bóng mờ đơn lớp nhẹ: `0 1px 3px rgba(0, 0, 0, 0.05)` cho card hoặc `0 4px 12px rgba(15, 23, 42, 0.15)` cho modal.
+4. **NEVER use non-monospace fonts as default:**
+   - **CẤM** tự ý đổi phông mặc định sang sans-serif tự do (như Inter, Poppins, Roboto, Arial) cho các trang Hub hoặc giao diện bài tập kỹ thuật. Monospace là định danh nhận diện thương hiệu của toàn bộ repository.
 
 ---
 

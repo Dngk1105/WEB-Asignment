@@ -94,6 +94,11 @@ WEB-Asignment/
 │   └── bai-tap-1/                  # Bài tập 1: Ứng dụng React 18 CRUD Quản lý Người dùng
 │       └── index.html              # Standalone React App (Functional Components, Hooks, State Lifting)
 │
+├── shared/                         # [DESIGN SYSTEM] Tài nguyên dùng chung chuẩn hóa
+│   └── css/
+│       └── design-tokens.css       # Biến CSS (:root) & Utility classes cho toàn bộ repo
+├── DESIGN_SYSTEM.md                # Tài liệu quy chuẩn thiết kế Academic Monospace Minimalism
+├── AGENTS.md                       # Nguyên tắc & quy chuẩn phát triển cho Agent
 └── README.md
 ```
 
@@ -144,6 +149,21 @@ WEB-Asignment/
 - **Bài tập 1 (Ứng dụng React 18 CRUD):** [https://dngk2408.id.vn/assignment-06/bai-tap-1/](https://dngk2408.id.vn/assignment-06/bai-tap-1/)
   - [Ứng dụng React CRUD (index.html)](https://dngk2408.id.vn/assignment-06/bai-tap-1/index.html)
 - **Tài liệu tổng quan:** [README.md](./assignment-06/README.md)
+
+---
+
+## Hệ thống Thiết kế Giao diện (Design System: Academic Monospace Minimalism)
+
+Toàn bộ giao diện Hub điều hướng và các bài tập thực hành trong repository được chuẩn hóa theo hệ thống thiết kế **Academic Monospace Minimalism** (Tối giản học thuật Monospace):
+
+- **Tập trung Design Tokens:** Toàn bộ biến CSS và các lớp tiện ích được quản lý tập trung tại [`shared/css/design-tokens.css`](./shared/css/design-tokens.css).
+- **Quy chuẩn Chi tiết & Mẫu Component:** Tham khảo chi tiết tài liệu đặc tả tại [`DESIGN_SYSTEM.md`](./DESIGN_SYSTEM.md) và hướng dẫn phát triển trong [`AGENTS.md`](./AGENTS.md).
+
+### 4 Nguyên tắc Cốt lõi:
+1. **Monospace Nhất quán (Typography First):** Áp dụng phông chữ monospace (`CaskaydiaCove Nerd Font Mono`, `Consolas`, `Monaco`, monospace) xuyên suốt toàn bộ các trang Hub, bảng dữ liệu, form nhập liệu và cửa sổ Modal.
+2. **Tuyệt đối Không Dùng Emoji & Icon (Zero Emojis & Icons):** Toàn bộ giao diện mang tính chất học thuật nghiêm túc, loại bỏ hoàn toàn các biểu tượng rực rỡ, icon mạng xã hội hoặc emoji trên nút bấm (`[+]`, `[X]`, `Sửa`, `Xóa`, `Tìm kiếm...`).
+3. **Bảng màu Slate & Tương phản Cao:** Sử dụng nền Slate-50 (`#f8fafc`), bề mặt Card/Modal màu trắng (`#ffffff`), viền Slate-300 (`#cbd5e1`), cùng màu nhấn xanh học thuật Blue-600 (`#2563eb`) và cảnh báo Red-700 (`#b91c1c`).
+4. **Bóng mờ Đơn tầng Tối giản:** Chỉ áp dụng bóng mờ 1 lớp siêu nhẹ (`0 1px 3px rgba(0, 0, 0, 0.05)` cho khối dữ liệu và `0 4px 12px rgba(15, 23, 42, 0.15)` cho modal), cấm sử dụng gradient đa sắc SaaS hay drop-shadow nhiều tầng.
 
 ---
 
